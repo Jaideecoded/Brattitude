@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brattitude Lashes | Professional Eyelash Services</title>
+    <meta name="description" content="Professional eyelash extensions, lifts, and tinting services. Transform your look with our premium lash treatments.">
+    <meta name="keywords" content="eyelash extensions, lash lift, lash tint, volume lashes, classic lashes, eyelash services">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Brattitude Lashes | Professional Eyelash Services">
+    <meta property="og:description" content="Transform your look with premium eyelash extensions, lifts, and tinting services.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ===== MASTER DESIGN SYSTEM ===== */
+        :root {
+            /* CORE COLOR PALETTE */
+            --black: #0a0a0a;
+            --dark-gray: #1a1a1a;
+            --white: #ffffff;
+            --pink-primary: #ff2d8e;
+            --pink-secondary: #ff66b2;
+            --pink-light: #ffb6d9;
+            --pink-dark: #c4005a;
+            
+            /* ACCENT COLORS */
+            --accent: var(--pink-primary);
+            --accent-light: var(--pink-light);
+            
+            /* SERVICE TIER COLORS */
+            --tier-1: #ff66b2;  /* Classic */
+            --tier-2: #ff2d8e;  /* Volume */
+            --tier-3: #ff0099;  /* Mega Volume */
+            --tier-custom: #d400ff; /* Custom */
+            
+            /* SECTION COLORS */
+            --section-light: rgba(255, 45, 142, 0.1);
+            --section-medium: rgba(26, 26, 26, 0.9);
+            --section-dark: rgba(10, 10, 10, 0.95);
+            
+            /* TEXT COLORS */
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.95);
+            --text-body: rgba(255, 255, 255, 0.85);
+            --text-muted: rgba(255, 255, 255, 0.65);
+            --border-color: rgba(255, 255, 255, 0.15);
+            
+            /* TYPOGRAPHY */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Poppins', sans-serif;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            /* SPACING */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-xxl: 5rem;
+            
+            /* BORDER RADIUS */
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-full: 50px;
+            
+            /* SHADOWS */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.5);
+            --shadow-accent: 0 0 30px rgba(255, 45, 142, 0.3);
+            --shadow-accent-md: 0 0 60px rgba(255, 45, 142, 0.2);
+        }
+        
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background-color: var(--black);
+            color: var(--text-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        /* ===== ENHANCED NAVIGATION ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: var(--space-md) var(--space-xl);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 45, 142, 0.2);
+            transition: var(--transition);
+        }
+        
+        .header.scrolled {
+            padding: var(--space-sm) var(--space-xl);
+            background: rgba(10, 10, 10, 0.98);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .logo span {
+            color: var(--pink-primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: var(--text-body);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            position: relative;
+            padding: var(--space-xs) 0;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--pink-primary);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--pink-primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: var(--space-xxl) var(--space-xl);
+            margin-top: 80px;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.2;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(10, 10, 10, 0.9), rgba(26, 26, 26, 0.8));
+            z-index: -1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+        }
+        
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+            line-height: 1.1;
+        }
+        
+        .hero-title span {
+            color: var(--pink-primary);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: var(--space-xl);
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+        
+        /* ===== BUTTONS ===== */
+        .btn-primary {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: linear-gradient(135deg, var(--pink-primary), var(--pink-dark));
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            border-radius: var(--radius-full);
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 0 8px 25px rgba(255, 45, 142, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 45, 142, 0.5);
+        }
+        
+        .btn-secondary {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: transparent;
+            color: var(--pink-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-radius: var(--radius-full);
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid var(--pink-primary);
+            cursor: pointer;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 45, 142, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        /* ===== SECTION SYSTEM ===== */
+        .section {
+            padding: var(--space-xxl) var(--space-xl);
+            position: relative;
+        }
+        
+        .section-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-xxl);
+        }
+        
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        .section-title span {
+            color: var(--pink-primary);
+        }
+        
+        .section-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            background-color: var(--section-medium);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xxl);
+            align-items: center;
+        }
+        
+        .about-image {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-text h3 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: var(--space-lg);
+            color: var(--text-primary);
+        }
+        
+        .about-text p {
+            font-size: 1.2rem;
+            margin-bottom: var(--space-lg);
+            color: var(--text-body);
+            line-height: 1.7;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+        
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 45, 142, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pink-primary);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            border: 1px solid rgba(255, 45, 142, 0.3);
+        }
+        
+        .feature-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: var(--space-xs);
+            color: var(--text-primary);
+        }
+        
+        /* ===== SERVICES SECTION ===== */
+        .services {
+            background-color: var(--section-dark);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-xl);
+        }
+        
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--pink-primary);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: var(--space-xl);
+        }
+        
+        .service-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: var(--space-sm);
+            color: var(--text-primary);
+        }
+        
+        .service-content p {
+            margin-bottom: var(--space-lg);
+            color: var(--text-body);
+        }
+        
+        .service-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--pink-primary);
+            margin-bottom: var(--space-md);
+        }
+        
+        .service-price span {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+        
+        .service-duration {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--text-muted);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--pink-primary);
+            color: var(--white);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.9rem;
+            z-index: 2;
+        }
+        
+        /* ===== PORTFOLIO/GALLERY SECTION ===== */
+        .portfolio {
+            background-color: var(--section-medium);
+        }
+        
+        .portfolio-filter {
+            display: flex;
+            gap: var(--space-sm);
+            justify-content: center;
+            margin-bottom: var(--space-xl);
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-body);
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-body);
+            font-size: 1rem;
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--pink-primary);
+            color: var(--white);
+            border-color: var(--pink-primary);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .portfolio-item {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 1;
+            background: var(--dark-gray);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--pink-primary);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(10, 10, 10, 0.9), transparent);
+            padding: var(--space-xl);
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+        
+        .portfolio-overlay h4 {
+            color: var(--white);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .portfolio-overlay p {
+            color: var(--text-body);
+            font-size: 0.9rem;
+        }
+        
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            background-color: var(--section-dark);
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xxl);
+        }
+        
+        .contact-info h3 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: var(--space-xl);
+            color: var(--text-primary);
+        }
+        
+        .contact-methods {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: var(--space-lg);
+            padding: var(--space-lg);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .contact-method:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--pink-primary);
+            transform: translateX(10px);
+        }
+        
+        .method-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 45, 142, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pink-primary);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            border: 1px solid rgba(255, 45, 142, 0.3);
+        }
+        
+        .method-text strong {
+            display: block;
+            font-size: 1.3rem;
+            margin-bottom: 4px;
+            color: var(--text-primary);
+        }
+        
+        .method-text p {
+            color: var(--text-body);
+        }
+        
+        .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--pink-primary);
+            background: rgba(255, 45, 142, 0.12);
+        }
+        
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            background-color: var(--section-medium);
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: var(--space-xxl) auto 0;
+            position: relative;
+        }
+        
+        .testimonial {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            text-align: center;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            display: none;
+        }
+        
+        .testimonial.active {
+            display: block;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .testimonial-text {
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-bottom: var(--space-lg);
+            color: var(--text-body);
+            line-height: 1.7;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-md);
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--pink-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+        
+        .author-info h4 {
+            color: var(--text-primary);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .author-info p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            margin-top: var(--space-xl);
+        }
+        
+        .slider-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-body);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        .slider-btn:hover {
+            background: var(--pink-primary);
+            color: var(--white);
+            border-color: var(--pink-primary);
+        }
+        
+        /* ===== FOOTER ===== */
+        .footer {
+            background-color: var(--black);
+            padding: var(--space-xxl) var(--space-xl) var(--space-xl);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: var(--space-xxl);
+            margin-bottom: var(--space-xxl);
+        }
+        
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .footer-logo span {
+            color: var(--pink-primary);
+        }
+        
+        .footer-description {
+            color: var(--text-body);
+            line-height: 1.7;
+        }
+        
+        .footer-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+        }
+        
+        .footer-column h4 {
+            font-size: 1.3rem;
+            margin-bottom: var(--space-lg);
+            color: var(--text-primary);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer-column a {
+            color: var(--text-body);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .footer-column a:hover {
+            color: var(--pink-primary);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+        
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-body);
+            font-size: 1.3rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .social-link:hover {
+            background: var(--pink-primary);
+            color: var(--white);
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--space-xl);
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1200px) {
+            .hero-title { font-size: 4rem; }
+            .section { padding: var(--space-xl) var(--space-lg); }
+            .footer-content { grid-template-columns: 1fr 1fr; }
+        }
+        
+        @media (max-width: 992px) {
+            .hero-title { font-size: 3.5rem; }
+            .section-title { font-size: 2.5rem; }
+            .about-content { grid-template-columns: 1fr; }
+            .contact-content { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+            .footer-content { grid-template-columns: 1fr; gap: var(--space-xl); }
+            .mobile-menu-btn { display: block; }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--black);
+                flex-direction: column;
+                padding: var(--space-xl);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                border-bottom: 1px solid var(--border-color);
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title { font-size: 3rem; }
+            .hero-subtitle { font-size: 1.5rem; }
+            .section { padding: var(--space-xl) var(--space-md); }
+            .section-title { font-size: 2.2rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .features { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-links { grid-template-columns: 1fr; }
+            .btn-primary { padding: 1rem 2.5rem; font-size: 1.1rem; }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title { font-size: 2.5rem; }
+            .hero-subtitle { font-size: 1.3rem; }
+            .section { padding: var(--space-xl) var(--space-sm); }
+            .section-title { font-size: 2rem; }
+            .btn-primary { padding: 0.9rem 2rem; font-size: 1rem; }
+            .service-price { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <a href="#home" class="logo">Brattitude<span>Lashes</span></a>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav class="nav-links" id="navLinks">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#portfolio" class="nav-link">Portfolio</a>
+            <a href="#testimonials" class="nav-link">Testimonials</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#contact" class="btn-primary" style="margin-left: var(--space-md);">Book Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero section" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Transform Your Look with <span>Brattitude Lashes</span></h1>
+            <p class="hero-subtitle">Professional eyelash extensions, lifts, and tinting services for a stunning, confident you.</p>
+            <div style="display: flex; gap: var(--space-md); justify-content: center; margin-top: var(--space-xl);">
+                <a href="#contact" class="btn-primary">Book Appointment</a>
+                <a href="#services" class="btn-secondary">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About <span>Brattitude</span></h2>
+                <p class="section-subtitle">Professional lash artistry with a personal touch</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lash Artist at Work">
+                </div>
+                
+                <div class="about-text">
+                    <h3>Your Lash Artist</h3>
+                    <p>Welcome to Brattitude Lashes, where we believe your eyes deserve the very best. With years of experience and specialized training, we provide premium eyelash services tailored to enhance your natural beauty.</p>
+                    <p>Our studio is a relaxing sanctuary where you can unwind while we work our magic. We use only the highest quality products and techniques to ensure your lashes look flawless and feel comfortable.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Certified Expert</h4>
+                                <p>Fully certified with ongoing training</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Premium Products</h4>
+                                <p>Only medical-grade, hypoallergenic materials</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Flexible Hours</h4>
+                                <p>Evening and weekend appointments available</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-spa"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Relaxing Environment</h4>
+                                <p>Comfortable, hygienic studio space</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our <span>Services</span></h2>
+                <p class="section-subtitle">Professional lash treatments to enhance your natural beauty</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Classic Lashes -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Classic Lashes">
+                    </div>
+                    <div class="service-content">
+                        <h3>Classic Lashes</h3>
+                        <p>One extension applied to each natural lash for a subtle, enhanced look. Perfect for everyday wear.</p>
+                        <div class="service-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>2-2.5 hours</span>
+                        </div>
+                        <div class="service-price">£45<span> / set</span></div>
+                        <a href="#contact" class="btn-primary" style="width: 100%; text-align: center;">Book Now</a>
+                    </div>
+                </div>
+                
+                <!-- Volume Lashes -->
+                <div class="service-card">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1596703923338-48f1c07e4f2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Volume Lashes">
+                    </div>
+                    <div class="service-content">
+                        <h3>Volume Lashes</h3>
+                        <p>Multiple lightweight extensions applied to each natural lash for a full, dramatic effect.</p>
+                        <div class="service-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>2.5-3 hours</span>
+                        </div>
+                        <div class="service-price">£65<span> / set</span></div>
+                        <a href="#contact" class="btn-primary" style="width: 100%; text-align: center;">Book Now</a>
+                    </div>
+                </div>
+                
+                <!-- Mega Volume Lashes -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mega Volume Lashes">
+                    </div>
+                    <div class="service-content">
+                        <h3>Mega Volume Lashes</h3>
+                        <p>Ultra-lightweight fans with multiple extensions for maximum volume and a show-stopping look.</p>
+                        <div class="service-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>3-3.5 hours</span>
+                        </div>
+                        <div class="service-price">£85<span> / set</span></div>
+                        <a href="#contact" class="btn-primary" style="width: 100%; text-align: center;">Book Now</a>
+                    </div>
+                </div>
+                
+                <!-- Lash Lift & Tint -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1519415711935-f7d43d125b56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lash Lift & Tint">
+                    </div>
+                    <div class="service-content">
+                        <h3>Lash Lift & Tint</h3>
+                        <p>Enhance your natural lashes with a lift and tint for a curl and color that lasts 6-8 weeks.</p>
+                        <div class="service-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>1-1.5 hours</span>
+                        </div>
+                        <div class="service-price">£40<span> / treatment</span></div>
+                        <a href="#contact" class="btn-primary" style="width: 100%; text-align: center;">Book Now</a>
+                    </div>
+                </div>
+                
+                <!-- Lash Fill -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lash Fill">
+                    </div>
+                    <div class="service-content">
+                        <h3>Lash Fill</h3>
+                        <p>Maintain your lash extensions with a fill appointment to replace grown-out lashes.</p>
+                        <div class="service-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>1-1.5 hours</span>
+                        </div>
+                        <div class="service-price">£30<span> / fill</span></div>
+                        <a href="#contact" class="btn-primary" style="width: 100%; text-align: center;">Book Now</a>
+                    </div>
+                </div>
+                
+                <!-- Custom Lash Design -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Custom Lash Design">
+                    </div>
+                    <div class="service-content">
+                        <h3>Custom Lash Design</h3>
+                        <p>Consultation and custom lash design tailored to your eye shape, lifestyle, and preferences.</p>
+                        <div class="service-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>Consultation + Service</span>
+                        </div>
+                        <div class="service-price">From £90<span></span></div>
+                        <a href="#contact" class="btn-primary" style="width: 100%; text-align: center;">Book Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio/Gallery Section -->
+    <section class="portfolio section" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our <span>Work</span></h2>
+                <p class="section-subtitle">See the transformations we've created for our clients</p>
+            </div>
+            
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All Work</button>
+                <button class="filter-btn" data-filter="classic">Classic</button>
+                <button class="filter-btn" data-filter="volume">Volume</button>
+                <button class="filter-btn" data-filter="mega">Mega Volume</button>
+                <button class="filter-btn" data-filter="lift">Lift & Tint</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item" data-category="volume">
+                    <img src="https://images.unsplash.com/photo-1596703923338-48f1c07e4f2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Volume Lashes Example">
+                    <div class="portfolio-overlay">
+                        <h4>Volume Set</h4>
+                        <p>Full, dramatic look with lightweight volume extensions</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item" data-category="classic">
+                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Classic Lashes Example">
+                    <div class="portfolio-overlay">
+                        <h4>Classic Set</h4>
+                        <p>Natural, elegant look with classic extensions</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item" data-category="mega">
+                    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mega Volume Lashes Example">
+                    <div class="portfolio-overlay">
+                        <h4>Mega Volume</h4>
+                        <p>Show-stopping look with ultra-lightweight fans</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item" data-category="lift">
+                    <img src="https://images.unsplash.com/photo-1519415711935-f7d43d125b56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lash Lift Example">
+                    <div class="portfolio-overlay">
+                        <h4>Lash Lift & Tint</h4>
+                        <p>Enhanced natural lashes with curl and color</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item" data-category="volume">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Volume Lashes Example 2">
+                    <div class="portfolio-overlay">
+                        <h4>Hybrid Set</h4>
+                        <p>Mix of classic and volume for a customized look</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item" data-category="classic">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Classic Lashes Example 2">
+                    <div class="portfolio-overlay">
+                        <h4>Natural Classic</h4>
+                        <p>Subtle enhancement for everyday elegance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Client <span>Love</span></h2>
+                <p class="section-subtitle">See what our clients are saying about their experience</p>
+            </div>
+            
+            <div class="testimonial-slider">
+                <!-- Testimonial 1 -->
+                <div class="testimonial active" id="testimonial-1">
+                    <div class="testimonial-text">
+                        "Absolutely in love with my new lashes! The studio is so relaxing and the attention to detail is incredible. I've never felt more confident!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Volume Lashes Client</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial" id="testimonial-2">
+                    <div class="testimonial-text">
+                        "I was nervous about getting lash extensions for the first time, but my artist made me feel so comfortable. The results are natural and beautiful - exactly what I wanted!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Megan Taylor</h4>
+                            <p>First-time Client</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial" id="testimonial-3">
+                    <div class="testimonial-text">
+                        "I've been getting my lashes done here for over a year and I won't go anywhere else. The quality is consistently amazing and my lashes always last so long between fills."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div class="author-info">
+                            <h4>Jessica Williams</h4>
+                            <p>Regular Client</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Book Your <span>Appointment</span></h2>
+                <p class="section-subtitle">Get in touch to schedule your lash transformation</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Info</h3>
+                    
+                    <div class="contact-methods">
+                        <a href="tel:+441234567890" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="method-text">
+                                <strong>Call Us</strong>
+                                <p>+44 1234 567890</p>
+                            </div>
+                        </a>
+                        
+                        <a href="mailto:hello@brattitudelashes.com" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-text">
+                                <strong>Email Us</strong>
+                                <p>hello@brattitudelashes.com</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://wa.me/441234567890" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="method-text">
+                                <strong>WhatsApp</strong>
+                                <p>+44 1234 567890</p>
+                            </div>
+                        </a>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-text">
+                                <strong>Studio Location</strong>
+                                <p>123 Beauty Street, London, UK</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: var(--space-xl);">
+                        <h4 style="margin-bottom: var(--space-md);">Business Hours</h4>
+                        <p style="margin-bottom: var(--space-xs);"><strong>Tuesday - Friday:</strong> 10:00 AM - 7:00 PM</p>
+                        <p style="margin-bottom: var(--space-xs);"><strong>Saturday:</strong> 9:00 AM - 5:00 PM</p>
+                        <p><strong>Sunday & Monday:</strong> Closed</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="bookingForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interested In *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="classic">Classic Lashes (£45)</option>
+                                <option value="volume">Volume Lashes (£65)</option>
+                                <option value="mega">Mega Volume Lashes (£85)</option>
+                                <option value="lift">Lash Lift & Tint (£40)</option>
+                                <option value="fill">Lash Fill (£30)</option>
+                                <option value="custom">Custom Lash Design (From £90)</option>
+                                <option value="consultation">Consultation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="date">Preferred Date *</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Additional Details</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your lash goals, any allergies, or special requests..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary" style="width: 100%;">Send Booking Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">Brattitude<span>Lashes</span></div>
+                    <p class="footer-description">
+                        Professional eyelash extensions, lifts, and tinting services. Transform your look with our premium lash treatments in a relaxing, comfortable environment.
+                    </p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                            <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Classic Lashes</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Volume Lashes</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Mega Volume</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Lash Lift & Tint</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2024</span> Brattitude Lashes. All rights reserved.</p>
+                <p style="margin-top: var(--space-sm);">Website designed with <i class="fas fa-heart" style="color: var(--pink-primary);"></i> for your beauty journey</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== INITIALIZE WEBSITE =====
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('✨ Brattitude Lashes Website Initializing...');
+            
+            // Initialize all components
+            initializeMobileMenu();
+            initializeTestimonialSlider();
+            initializePortfolioFilter();
+            initializeBookingForm();
+            updateCurrentYear();
+            initializeSmoothScrolling();
+            
+            console.log('✅ Website initialized successfully!');
+        });
+
+        // ===== MOBILE MENU =====
+        function initializeMobileMenu() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                        ? '<i class="fas fa-times"></i>' 
+                        : '<i class="fas fa-bars"></i>';
+                });
+                
+                // Close menu when clicking on a link
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    });
+                });
+            }
+        }
+
+        // ===== TESTIMONIAL SLIDER =====
+        function initializeTestimonialSlider() {
+            const testimonials = document.querySelectorAll('.testimonial');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            let currentIndex = 0;
+            
+            if (testimonials.length === 0) return;
+            
+            function showTestimonial(index) {
+                // Hide all testimonials
+                testimonials.forEach(testimonial => {
+                    testimonial.classList.remove('active');
+                });
+                
+                // Show the current testimonial
+                testimonials[index].classList.add('active');
+                currentIndex = index;
+            }
+            
+            function nextTestimonial() {
+                let nextIndex = currentIndex + 1;
+                if (nextIndex >= testimonials.length) nextIndex = 0;
+                showTestimonial(nextIndex);
+            }
+            
+            function prevTestimonial() {
+                let prevIndex = currentIndex - 1;
+                if (prevIndex < 0) prevIndex = testimonials.length - 1;
+                showTestimonial(prevIndex);
+            }
+            
+            // Add event listeners
+            if (prevBtn) prevBtn.addEventListener('click', prevTestimonial);
+            if (nextBtn) nextBtn.addEventListener('click', nextTestimonial);
+            
+            // Auto-rotate testimonials every 5 seconds
+            setInterval(nextTestimonial, 5000);
+        }
+
+        // ===== PORTFOLIO FILTER =====
+        function initializePortfolioFilter() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            if (filterButtons.length === 0 || portfolioItems.length === 0) return;
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    // Get filter value
+                    const filterValue = button.getAttribute('data-filter');
+                    
+                    // Show/hide portfolio items based on filter
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        }
+
+        // ===== BOOKING FORM =====
+        function initializeBookingForm() {
+            const bookingForm = document.getElementById('bookingForm');
+            
+            if (bookingForm) {
+                // Set minimum date to today
+                const dateInput = document.getElementById('date');
+                if (dateInput) {
+                    const today = new Date().toISOString().split('T')[0];
+                    dateInput.min = today;
+                }
+                
+                bookingForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = new FormData(this);
+                    const name = formData.get('name');
+                    const service = formData.get('service');
+                    
+                    // Show success message
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                    submitBtn.disabled = true;
+                    
+                    // Simulate form submission (replace with actual backend integration)
+                    setTimeout(() => {
+                        submitBtn.innerHTML = '<i class="fas fa-check"></i> Appointment Requested!';
+                        submitBtn.style.background = '#25D366';
+                        
+                        // Reset form after 2 seconds
+                        setTimeout(() => {
+                            bookingForm.reset();
+                            submitBtn.innerHTML = originalText;
+                            submitBtn.disabled = false;
+                            submitBtn.style.background = '';
+                        }, 2000);
+                        
+                        // Show confirmation message
+                        alert(`Thank you, ${name}! Your appointment request for ${service} has been received. We'll contact you within 24 hours to confirm your booking.`);
+                    }, 1500);
+                });
+            }
+        }
+
+        // ===== SMOOTH SCROLLING =====
+        function initializeSmoothScrolling() {
+            // Update active nav link on scroll
+            window.addEventListener('scroll', () => {
+                const header = document.getElementById('header');
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                // Update active nav link
+                const sections = document.querySelectorAll('section');
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                let currentSection = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerHeight = document.getElementById('header').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // ===== UTILITIES =====
+        function updateCurrentYear() {
+            const currentYear = document.getElementById('currentYear');
+            if (currentYear) {
+                currentYear.textContent = new Date().getFullYear();
+            }
+        }
+    </script>
+</body>
+</html>
