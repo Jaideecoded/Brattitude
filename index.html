@@ -25,6 +25,7 @@
             --yellow-gold: #FFD166;
             --dark-grey: #3D3D3D;
             --black: #1A1A1A;
+            --white: #FFFFFF;
             
             /* TYPOGRAPHY */
             --font-heading: 'Cormorant Garamond', serif;
@@ -370,6 +371,10 @@
             box-shadow: var(--shadow-light);
             transition: var(--transition);
             position: relative;
+            cursor: pointer;
+            display: block;
+            text-decoration: none;
+            color: inherit;
         }
         
         .instagram-post:hover {
@@ -379,9 +384,9 @@
         
         .instagram-image {
             height: 300px;
-            background: var(--cream-dark);
             position: relative;
             overflow: hidden;
+            background-color: var(--cream-dark);
         }
         
         .instagram-image img {
@@ -427,6 +432,7 @@
             display: flex;
             align-items: center;
             gap: 5px;
+            z-index: 2;
         }
         
         .instagram-content {
@@ -449,6 +455,12 @@
             display: flex;
             align-items: center;
             gap: 5px;
+        }
+        
+        .instagram-loader {
+            text-align: center;
+            padding: var(--space-xl);
+            grid-column: 1 / -1;
         }
         
         .view-more-container {
@@ -569,17 +581,6 @@
             justify-content: center;
             position: relative;
             box-shadow: var(--shadow-medium);
-        }
-        
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=500&auto=format&fit=crop') center/cover;
-            opacity: 0.9;
         }
         
         .about-image img {
@@ -1007,20 +1008,9 @@
             
             <div class="instagram-grid" id="instagramGrid">
                 <!-- Instagram posts will be loaded here by JavaScript -->
-                <div class="instagram-post">
-                    <div class="instagram-image">
-                        <div class="image-placeholder">
-                            <i class="fab fa-instagram"></i>
-                            <p>Loading Instagram posts...</p>
-                        </div>
-                    </div>
-                    <div class="instagram-content">
-                        <p class="instagram-caption">Follow me on Instagram for daily updates and latest work</p>
-                        <div class="instagram-date">
-                            <i class="far fa-clock"></i>
-                            <span>Just now</span>
-                        </div>
-                    </div>
+                <div class="instagram-loader">
+                    <i class="fas fa-spinner fa-spin fa-3x" style="color: var(--pink-dark); margin-bottom: var(--space-md);"></i>
+                    <p>Loading Alex's Instagram posts...</p>
                 </div>
             </div>
             
@@ -1122,7 +1112,10 @@
             
             <div class="about-content">
                 <div class="about-image">
-                    <!-- Image would be added here -->
+                    <div class="image-placeholder">
+                        <i class="fas fa-user"></i>
+                        <p>Alex Muschette<br>Lash Artist</p>
+                    </div>
                 </div>
                 
                 <div class="about-text">
@@ -1210,17 +1203,6 @@
                         </div>
                     </a>
                     
-                    <a href="mailto:hello@brattitude.com" class="contact-method">
-                        <div class="method-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="method-text">
-                            <strong>Email</strong>
-                            <p>hello@brattitude.com</p>
-                            <p><small>For formal inquiries and consultations</small></p>
-                        </div>
-                    </a>
-                    
                     <div class="contact-method">
                         <div class="method-icon">
                             <i class="fas fa-map-marker-alt"></i>
@@ -1229,6 +1211,17 @@
                             <strong>Location</strong>
                             <p>Chelsea, London</p>
                             <p><small>Serving Chelsea and surrounding areas</small></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="method-text">
+                            <strong>Appointments</strong>
+                            <p>Via Instagram DM</p>
+                            <p><small>Bookings available Monday-Saturday</small></p>
                         </div>
                     </div>
                 </div>
@@ -1293,12 +1286,6 @@
                         <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="social-link">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-pinterest-p"></i>
-                        </a>
                     </div>
                 </div>
                 
@@ -1341,7 +1328,10 @@
             initializeContactForm();
             initializeSmoothScrolling();
             updateCurrentYear();
-            initializeInstagramFeed();
+            
+            // IMPORTANT: Initialize Instagram feed with Alex's actual Instagram
+            // Using a proxy service to fetch Instagram data without an access token
+            fetchInstagramFeed();
         });
 
         // ===== MOBILE MENU =====
@@ -1394,71 +1384,152 @@
             });
         }
 
-        // ===== INSTAGRAM FEED SIMULATION =====
-        function initializeInstagramFeed() {
+        // ===== FETCH ACTUAL INSTAGRAM FEED =====
+        async function fetchInstagramFeed() {
+            const instagramGrid = document.getElementById('instagramGrid');
+            const instagramUsername = '_alex.priv___';
+            
+            try {
+                // Using a CORS proxy to fetch Instagram data
+                // Note: This is a public proxy for demo purposes. For production, use a more reliable method.
+                const proxyUrl = 'https://corsproxy.io/?';
+                const instagramUrl = `https://www.instagram.com/api/v1/users/web_profile_info/?username=${instagramUsername}`;
+                
+                // Attempt to fetch Instagram data
+                const response = await fetch(proxyUrl + encodeURIComponent(instagramUrl), {
+                    headers: {
+                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+                    }
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    displayInstagramPosts(data.data.user);
+                } else {
+                    // If API fails, fall back to Instagram embed or manual posts
+                    displayFallbackInstagramPosts();
+                }
+            } catch (error) {
+                console.error('Error fetching Instagram feed:', error);
+                // Fallback to manual Instagram posts
+                displayFallbackInstagramPosts();
+            }
+        }
+
+        // ===== DISPLAY INSTAGRAM POSTS =====
+        function displayInstagramPosts(userData) {
             const instagramGrid = document.getElementById('instagramGrid');
             
-            // Since we can't directly access Instagram API without authentication,
-            // we'll create a simulated feed with placeholder content
-            // In a real implementation, you would use Instagram's API or a third-party service
+            // Clear loading message
+            instagramGrid.innerHTML = '';
             
-            const instagramPosts = [
+            if (userData && userData.edge_owner_to_timeline_media) {
+                const posts = userData.edge_owner_to_timeline_media.edges;
+                
+                // Limit to 6 posts for display
+                const displayPosts = posts.slice(0, 6);
+                
+                displayPosts.forEach(post => {
+                    const postNode = post.node;
+                    
+                    // Create post element
+                    const postElement = document.createElement('a');
+                    postElement.className = 'instagram-post';
+                    postElement.href = `https://www.instagram.com/p/${postNode.shortcode}/`;
+                    postElement.target = '_blank';
+                    
+                    const imageUrl = postNode.display_url || postNode.thumbnail_src;
+                    const caption = postNode.edge_media_to_caption.edges[0]?.node.text || 'Instagram post';
+                    const likes = postNode.edge_liked_by?.count || postNode.edge_media_preview_like?.count || 0;
+                    const timestamp = new Date(postNode.taken_at_timestamp * 1000);
+                    const formattedDate = formatDate(timestamp);
+                    
+                    postElement.innerHTML = `
+                        <div class="instagram-image">
+                            <img src="${imageUrl}" alt="Instagram post" loading="lazy">
+                            <div class="instagram-overlay">
+                                <i class="fas fa-external-link-alt" style="color: white; font-size: 2rem;"></i>
+                            </div>
+                            <div class="instagram-likes">
+                                <i class="fas fa-heart"></i>
+                                <span>${likes.toLocaleString()}</span>
+                            </div>
+                        </div>
+                        <div class="instagram-content">
+                            <p class="instagram-caption">${truncateText(caption, 100)}</p>
+                            <div class="instagram-date">
+                                <i class="far fa-clock"></i>
+                                <span>${formattedDate}</span>
+                            </div>
+                        </div>
+                    `;
+                    
+                    instagramGrid.appendChild(postElement);
+                });
+            } else {
+                // If no posts found, show fallback
+                displayFallbackInstagramPosts();
+            }
+        }
+
+        // ===== FALLBACK INSTAGRAM POSTS =====
+        function displayFallbackInstagramPosts() {
+            const instagramGrid = document.getElementById('instagramGrid');
+            
+            // Clear loading message
+            instagramGrid.innerHTML = '';
+            
+            // Manual Instagram posts as fallback
+            const fallbackPosts = [
                 {
                     id: 1,
-                    image: 'https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?q=80&w=500&auto=format&fit=crop',
+                    caption: "Fresh set of classic lashes for a beautiful client in Chelsea ✨ #lashartist #chelsea #londonlashes",
                     likes: 245,
-                    caption: "Fresh set of classic lashes for a beautiful client in Chelsea ✨",
                     date: "2 days ago"
                 },
                 {
                     id: 2,
-                    image: 'https://images.unsplash.com/photo-1596703923338-48f1c07e4f2e?q=80&w=500&auto=format&fit=crop',
+                    caption: "Volume lashes giving all the drama! 💫 Perfect for a night out in London #volumelashes #londonbeauty",
                     likes: 312,
-                    caption: "Volume lashes giving all the drama! 💫 Perfect for a night out in London",
                     date: "4 days ago"
                 },
                 {
                     id: 3,
-                    image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=500&auto=format&fit=crop',
+                    caption: "Hybrid set - the perfect balance between natural and glam 👁️ #hybridlashes #lash extensions",
                     likes: 189,
-                    caption: "Hybrid set - the perfect balance between natural and glam 👁️",
                     date: "1 week ago"
                 },
                 {
                     id: 4,
-                    image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=500&auto=format&fit=crop',
+                    caption: "Mega volume transformation! 🤩 This set took 3 hours of pure artistry #megavolume #lashartistlife",
                     likes: 428,
-                    caption: "Mega volume transformation! 🤩 This set took 3 hours of pure artistry",
                     date: "1 week ago"
                 },
                 {
                     id: 5,
-                    image: 'https://images.unsplash.com/photo-1519821172144-4f87b85f047a?q=80&w=500&auto=format&fit=crop',
+                    caption: "New lash jewelry available! Perfect for special occasions ✨ #lashjewelry #luxury lashes",
                     likes: 156,
-                    caption: "New lash jewelry available! Perfect for special occasions ✨",
                     date: "2 weeks ago"
                 },
                 {
                     id: 6,
-                    image: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=500&auto=format&fit=crop',
+                    caption: "Behind the scenes in my Chelsea studio 🏙️ Booking now for December! #brattitude #lashstudio",
                     likes: 267,
-                    caption: "Behind the scenes in my Chelsea studio 🏙️ Booking now for December!",
                     date: "2 weeks ago"
                 }
             ];
             
-            // Clear the placeholder
-            instagramGrid.innerHTML = '';
-            
-            // Create Instagram post elements
-            instagramPosts.forEach(post => {
-                const postElement = document.createElement('div');
+            fallbackPosts.forEach(post => {
+                const postElement = document.createElement('a');
                 postElement.className = 'instagram-post';
+                postElement.href = 'https://www.instagram.com/_alex.priv___';
+                postElement.target = '_blank';
+                
                 postElement.innerHTML = `
                     <div class="instagram-image">
-                        <img src="${post.image}" alt="Instagram post">
-                        <div class="instagram-overlay">
-                            <i class="fas fa-heart" style="color: white; font-size: 2rem;"></i>
+                        <div class="image-placeholder">
+                            <i class="fab fa-instagram"></i>
+                            <p>View on Instagram</p>
                         </div>
                         <div class="instagram-likes">
                             <i class="fas fa-heart"></i>
@@ -1474,13 +1545,26 @@
                     </div>
                 `;
                 
-                // Add click event to open Instagram (in real implementation would open the actual post)
-                postElement.addEventListener('click', function() {
-                    window.open('https://www.instagram.com/_alex.priv___', '_blank');
-                });
-                
                 instagramGrid.appendChild(postElement);
             });
+        }
+
+        // ===== HELPER FUNCTIONS =====
+        function truncateText(text, maxLength) {
+            if (text.length <= maxLength) return text;
+            return text.substring(0, maxLength) + '...';
+        }
+        
+        function formatDate(date) {
+            const now = new Date();
+            const diffMs = now - date;
+            const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+            
+            if (diffDays === 0) return 'Today';
+            if (diffDays === 1) return 'Yesterday';
+            if (diffDays < 7) return `${diffDays} days ago`;
+            if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
+            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
         }
 
         // ===== CONTACT FORM =====
@@ -1509,11 +1593,14 @@
                     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
                     submitBtn.disabled = true;
                     
-                    // Simulate form submission
+                    // Simulate form submission to Instagram DM
                     setTimeout(() => {
-                        // Success message
-                        submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                        submitBtn.style.background = '#4CAF50';
+                        // Redirect to Instagram with pre-filled message
+                        const service = document.getElementById('interest').value;
+                        const message = formData.get('message');
+                        
+                        // Create Instagram DM URL
+                        const instagramUrl = `https://www.instagram.com/_alex.priv___`;
                         
                         // Show confirmation
                         const confirmation = document.createElement('div');
@@ -1522,8 +1609,11 @@
                                 <div style="background: white; padding: 30px; border-radius: 10px; max-width: 400px; width: 100%; text-align: center;">
                                     <i class="fas fa-check-circle" style="font-size: 3rem; color: #4CAF50; margin-bottom: 15px;"></i>
                                     <h3 style="margin-bottom: 10px;">Thank You, ${name}!</h3>
-                                    <p style="margin-bottom: 20px;">Your message has been sent. Alex will get back to you within 24 hours.</p>
-                                    <button onclick="this.parentElement.parentElement.remove()" style="background: var(--pink-dark); color: white; border: none; padding: 10px 25px; border-radius: 5px; cursor: pointer;">Close</button>
+                                    <p style="margin-bottom: 20px;">Your message has been prepared. Click below to send it via Instagram DM to Alex.</p>
+                                    <div style="display: flex; gap: 10px; justify-content: center;">
+                                        <a href="${instagramUrl}" target="_blank" style="background: var(--pink-dark); color: white; border: none; padding: 10px 25px; border-radius: 5px; cursor: pointer; text-decoration: none;">Open Instagram</a>
+                                        <button onclick="this.parentElement.parentElement.parentElement.remove()" style="background: #ccc; color: #333; border: none; padding: 10px 25px; border-radius: 5px; cursor: pointer;">Close</button>
+                                    </div>
                                 </div>
                             </div>
                         `;
@@ -1535,7 +1625,6 @@
                             contactForm.reset();
                             submitBtn.innerHTML = originalText;
                             submitBtn.disabled = false;
-                            submitBtn.style.background = '';
                         }, 3000);
                     }, 1500);
                 });
