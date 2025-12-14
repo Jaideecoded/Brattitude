@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Muschette | Brattitude Lashes - Premium Lash Artistry</title>
-    <meta name="description" content="Professional lash artist Alex Muschette's portfolio. Specializing in classic, hybrid, and volume eyelash extensions in Chelsea, London.">
+    <title>Alex Muschette | Premium Lash Artistry - Chelsea, London</title>
+    <meta name="description" content="Professional lash artist Alex Muschette's luxury portfolio. Specializing in classic, hybrid, volume, and mega volume eyelash extensions in Chelsea, London.">
     
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* ===== ENHANCED DESIGN SYSTEM ===== */
+        /* ===== ENHANCED LUXURY DESIGN SYSTEM ===== */
         :root {
             /* LUXURY COLOR PALETTE */
             --black: #0a0a0a;
@@ -96,6 +95,17 @@
             min-height: 100vh;
         }
         
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+        
+        .section {
+            padding: var(--space-xxl) 0;
+            position: relative;
+        }
+        
         /* ===== LUXURY BACKGROUND ===== */
         .luxury-bg {
             position: fixed;
@@ -174,7 +184,7 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            padding: var(--space-md) var(--space-xl);
+            padding: var(--space-md) 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -185,9 +195,16 @@
         }
         
         .header.scrolled {
-            padding: var(--space-sm) var(--space-xl);
+            padding: var(--space-sm) 0;
             background: rgba(10, 10, 10, 0.98);
             box-shadow: var(--shadow-lg);
+        }
+        
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
         }
         
         .logo {
@@ -289,8 +306,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            padding: var(--space-xxl) var(--space-xl);
-            margin-top: 100px;
+            padding-top: 100px;
         }
         
         .hero-content {
@@ -485,8 +501,6 @@
         
         /* ===== PORTFOLIO SECTION ===== */
         .portfolio {
-            padding: var(--space-xxl) var(--space-xl);
-            position: relative;
             background: rgba(15, 15, 15, 0.9);
         }
         
@@ -627,8 +641,6 @@
         
         /* ===== ABOUT SECTION ===== */
         .about {
-            padding: var(--space-xxl) var(--space-xl);
-            position: relative;
             background: rgba(20, 20, 20, 0.9);
         }
         
@@ -737,8 +749,6 @@
         
         /* ===== CONTACT SECTION ===== */
         .contact {
-            padding: var(--space-xxl) var(--space-xl);
-            position: relative;
             background: rgba(10, 10, 10, 0.95);
         }
         
@@ -862,7 +872,7 @@
         /* ===== FOOTER ===== */
         .footer {
             background-color: var(--charcoal);
-            padding: var(--space-xxl) var(--space-xl) var(--space-xl);
+            padding: var(--space-xxl) 0 var(--space-xl);
             border-top: 1px solid rgba(231, 84, 128, 0.2);
             position: relative;
         }
@@ -1075,7 +1085,7 @@
         /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 1200px) {
             .hero-title { font-size: 4.5rem; }
-            .section { padding: var(--space-xl) var(--space-lg); }
+            .section-title { font-size: 3.5rem; }
             .footer-content { grid-template-columns: 1fr 1fr; }
         }
         
@@ -1112,9 +1122,9 @@
         }
         
         @media (max-width: 768px) {
+            .container { padding: 0 var(--space-md); }
             .hero-title { font-size: 3.5rem; }
             .hero-subtitle { font-size: 1.6rem; }
-            .section { padding: var(--space-xl) var(--space-md); }
             .section-title { font-size: 3rem; }
             .portfolio-grid { grid-template-columns: 1fr; }
             .form-row { grid-template-columns: 1fr; }
@@ -1122,17 +1132,17 @@
             .btn-primary, .btn-secondary { padding: 1.2rem 3rem; font-size: 1.1rem; margin-bottom: var(--space-sm); }
             .portfolio-filter { flex-direction: column; align-items: center; }
             .filter-btn { width: 220px; text-align: center; }
-            .hero { margin-top: 80px; }
+            .hero { padding-top: 80px; }
         }
         
         @media (max-width: 576px) {
+            .container { padding: 0 var(--space-sm); }
             .hero-title { font-size: 3rem; }
             .hero-subtitle { font-size: 1.4rem; }
-            .section { padding: var(--space-xl) var(--space-sm); }
             .section-title { font-size: 2.5rem; }
             .btn-primary, .btn-secondary { padding: 1.1rem 2.5rem; font-size: 1rem; }
             .hero-badge { font-size: 1rem; padding: var(--space-xs) var(--space-lg); }
-            .header { padding: var(--space-sm) var(--space-md); }
+            .header .container { padding: 0 var(--space-sm); }
             .nav-links { width: 100%; }
         }
     </style>
@@ -1158,40 +1168,44 @@
     
     <!-- Header -->
     <header class="header" id="header">
-        <a href="#home" class="logo">Alex<span>Muschette</span><span class="logo-subtitle">LASH ARTIST</span></a>
-        
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
-            <i class="fas fa-bars"></i>
-        </button>
-        
-        <nav class="nav-links" id="navLinks">
-            <a href="#home" class="nav-link active">Home</a>
-            <a href="#portfolio" class="nav-link">Portfolio</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#contact" class="nav-link">Contact</a>
-            <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="btn-primary" style="margin-left: 0;">
-                <i class="fab fa-instagram"></i> Instagram
-            </a>
-        </nav>
+        <div class="container">
+            <a href="#home" class="logo">Alex<span>Muschette</span><span class="logo-subtitle">LASH ARTIST</span></a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="btn-primary" style="margin-left: 0;">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero section" id="home">
-        <div class="hero-content">
-            <div class="hero-badge">Premium Lash Artistry</div>
-            
-            <h1 class="hero-title">Alex<span>Muschette</span></h1>
-            
-            <p class="hero-subtitle">Transforming beauty with precision, luxury, and artistic vision. Specializing in bespoke lash extensions for the discerning client.</p>
-            
-            <div class="location-tag">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Chelsea, London | Originally from Leicester</span>
-            </div>
-            
-            <div style="margin-top: var(--space-xl);">
-                <a href="#portfolio" class="btn-primary">View Portfolio</a>
-                <a href="#contact" class="btn-secondary">Book Consultation</a>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">Premium Lash Artistry</div>
+                
+                <h1 class="hero-title">Alex<span>Muschette</span></h1>
+                
+                <p class="hero-subtitle">Transforming beauty with precision, luxury, and artistic vision. Specializing in bespoke lash extensions for the discerning client.</p>
+                
+                <div class="location-tag">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Chelsea, London | Originally from Leicester</span>
+                </div>
+                
+                <div style="margin-top: var(--space-xl);">
+                    <a href="#portfolio" class="btn-primary">View Portfolio</a>
+                    <a href="#contact" class="btn-secondary">Book Consultation</a>
+                </div>
             </div>
         </div>
     </section>
@@ -1413,7 +1427,7 @@
                             </div>
                         </a>
                         
-                        <a href="mailto:alex@brattitudelashes.com" class="contact-method">
+                        <a href="mailto:hello@alexmuschette.com" class="contact-method">
                             <div class="method-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
