@@ -3,10 +3,744 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brattitude Lashes | The Artistry of Alex Muschette</title>
-    <meta name="description" content="Discover the lash artistry of Alex Muschette. Premium eyelash extensions with a personalized touch. Coming soon to Luton.">
-    <!-- Fonts, Icons, and CSS remain exactly the same as your excellent original design -->
-    <!-- ... (All CSS styles from the original code are preserved here) ... -->
+    <title>Alex Muschette | Brattitude Lashes - Lash Artistry Portfolio</title>
+    <meta name="description" content="Professional lash artist Alex Muschette's portfolio. Specializing in classic, hybrid, and volume eyelash extensions in Luton, Bedfordshire.">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ===== MASTER DESIGN SYSTEM ===== */
+        :root {
+            --black: #0a0a0a;
+            --dark-gray: #1a1a1a;
+            --white: #ffffff;
+            --pink-primary: #ff2d8e;
+            --pink-secondary: #ff66b2;
+            --pink-light: #ffb6d9;
+            --pink-dark: #c4005a;
+            
+            --gradient-1: linear-gradient(135deg, #ff2d8e, #ff66b2);
+            --gradient-2: linear-gradient(135deg, #c4005a, #ff2d8e);
+            
+            --font-heading: 'Dancing Script', cursive;
+            --font-body: 'Poppins', sans-serif;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-xxl: 5rem;
+            
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-full: 50px;
+            
+            --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.5);
+            --shadow-accent: 0 0 30px rgba(255, 45, 142, 0.3);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background-color: var(--black);
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        /* Animated Background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: radial-gradient(circle at 20% 50%, rgba(255, 45, 142, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 102, 178, 0.1) 0%, transparent 50%);
+            animation: pulse-bg 10s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-bg {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 0.8; }
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: var(--space-md) var(--space-xl);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 45, 142, 0.2);
+            transition: var(--transition);
+        }
+        
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .logo span {
+            color: var(--pink-primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            position: relative;
+            padding: var(--space-xs) 0;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--pink-primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: var(--space-xxl) var(--space-xl);
+            margin-top: 80px;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: var(--gradient-1);
+            color: var(--white);
+            padding: var(--space-sm) var(--space-xl);
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: var(--space-xl);
+            animation: pulse 2s infinite;
+            box-shadow: var(--shadow-accent);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: 5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            color: var(--white);
+            line-height: 1.1;
+        }
+        
+        .hero-title span {
+            color: var(--pink-primary);
+            display: block;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: var(--space-xl);
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.4;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Buttons */
+        .btn-primary {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--gradient-1);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            border-radius: var(--radius-full);
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 0 8px 25px rgba(255, 45, 142, 0.4);
+            margin: 0 var(--space-sm);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 45, 142, 0.5);
+        }
+        
+        .btn-secondary {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: transparent;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            border-radius: var(--radius-full);
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid var(--pink-primary);
+            cursor: pointer;
+            margin: 0 var(--space-sm);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 45, 142, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        /* Portfolio Section */
+        .portfolio {
+            padding: var(--space-xxl) var(--space-xl);
+            position: relative;
+            background: rgba(10, 10, 10, 0.9);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-xxl);
+        }
+        
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            color: var(--white);
+        }
+        
+        .section-title span {
+            color: var(--pink-primary);
+        }
+        
+        .section-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .portfolio-filter {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-xl);
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: var(--space-sm) var(--space-xl);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.85);
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--pink-primary);
+            color: var(--white);
+            border-color: var(--pink-primary);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-xl);
+        }
+        
+        .portfolio-item {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 1;
+            background: var(--dark-gray);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--pink-primary);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(10, 10, 10, 0.9), transparent);
+            padding: var(--space-xl);
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+        
+        .portfolio-category {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--pink-primary);
+            color: var(--white);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--radius-full);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        /* About Section */
+        .about {
+            padding: var(--space-xxl) var(--space-xl);
+            position: relative;
+            background: rgba(26, 26, 26, 0.9);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xxl);
+            align-items: center;
+        }
+        
+        .about-image {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-text h3 {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            margin-bottom: var(--space-lg);
+            color: var(--white);
+        }
+        
+        .about-text h3 span {
+            color: var(--pink-primary);
+        }
+        
+        .about-text p {
+            font-size: 1.2rem;
+            margin-bottom: var(--space-lg);
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+        
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 45, 142, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pink-primary);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            border: 1px solid rgba(255, 45, 142, 0.3);
+        }
+        
+        .feature-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: var(--space-xs);
+            color: var(--white);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: var(--space-xxl) var(--space-xl);
+            position: relative;
+            background: rgba(10, 10, 10, 0.9);
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xxl);
+        }
+        
+        .contact-info h3 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: var(--space-xl);
+            color: var(--white);
+        }
+        
+        .contact-info h3 span {
+            color: var(--pink-primary);
+        }
+        
+        .contact-methods {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: var(--space-lg);
+            padding: var(--space-lg);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .contact-method:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--pink-primary);
+            transform: translateX(10px);
+        }
+        
+        .method-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 45, 142, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pink-primary);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            border: 1px solid rgba(255, 45, 142, 0.3);
+        }
+        
+        .method-text strong {
+            display: block;
+            font-size: 1.3rem;
+            margin-bottom: 4px;
+            color: var(--white);
+        }
+        
+        .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-md);
+            color: var(--white);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--pink-primary);
+            background: rgba(255, 45, 142, 0.12);
+        }
+        
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--black);
+            padding: var(--space-xxl) var(--space-xl) var(--space-xl);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: var(--space-xxl);
+            margin-bottom: var(--space-xxl);
+        }
+        
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .footer-logo span {
+            color: var(--pink-primary);
+        }
+        
+        .footer-description {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+        
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.3rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .social-link:hover {
+            background: var(--pink-primary);
+            color: var(--white);
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--space-xl);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero-title { font-size: 4rem; }
+            .portfolio, .about, .contact { padding: var(--space-xl) var(--space-lg); }
+            .footer-content { grid-template-columns: 1fr 1fr; }
+        }
+        
+        @media (max-width: 992px) {
+            .hero-title { font-size: 3.5rem; }
+            .section-title { font-size: 3rem; }
+            .about-content, .contact-content { grid-template-columns: 1fr; }
+            .portfolio-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+            .footer-content { grid-template-columns: 1fr; gap: var(--space-xl); }
+            .mobile-menu-btn { display: block; }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: rgba(10, 10, 10, 0.98);
+                flex-direction: column;
+                padding: var(--space-xxl);
+                transform: translateX(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 1000;
+                justify-content: center;
+                gap: var(--space-xl);
+            }
+            
+            .nav-links.active {
+                transform: translateX(0);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title { font-size: 3rem; }
+            .hero-subtitle { font-size: 1.5rem; }
+            .portfolio, .about, .contact { padding: var(--space-xl) var(--space-md); }
+            .section-title { font-size: 2.5rem; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .features { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .btn-primary, .btn-secondary { padding: 1rem 2.5rem; font-size: 1.1rem; margin-bottom: var(--space-sm); }
+            .portfolio-filter { flex-direction: column; align-items: center; }
+            .filter-btn { width: 200px; text-align: center; }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title { font-size: 2.5rem; }
+            .hero-subtitle { font-size: 1.3rem; }
+            .portfolio, .about, .contact { padding: var(--space-xl) var(--space-sm); }
+            .section-title { font-size: 2.2rem; }
+            .btn-primary, .btn-secondary { padding: 0.9rem 2rem; font-size: 1rem; }
+            .hero-badge { font-size: 1rem; padding: var(--space-xs) var(--space-lg); }
+        }
+        
+        /* Image Placeholder Styling */
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--dark-gray), #2a2a2a);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-xl);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .image-placeholder i {
+            font-size: 3rem;
+            margin-bottom: var(--space-md);
+            color: var(--pink-primary);
+        }
+        
+        .placeholder-instruction {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            color: var(--pink-light);
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <!-- Animated Background -->
@@ -14,333 +748,372 @@
     
     <!-- Header -->
     <header class="header" id="header">
-        <a href="#home" class="logo">Brattitude<span>Lashes</span></a>
-        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        <a href="#home" class="logo">Alex<span>Muschette</span></a>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        
         <nav class="nav-links" id="navLinks">
             <a href="#home" class="nav-link active">Home</a>
-            <a href="#portfolio" class="nav-link">Portfolio</a> <!-- Changed -->
-            <a href="#about" class="nav-link">The Artist</a> <!-- Changed -->
-            <a href="#services" class="nav-link">Services</a> <!-- Changed -->
+            <a href="#portfolio" class="nav-link">Portfolio</a>
+            <a href="#about" class="nav-link">About</a>
             <a href="#contact" class="nav-link">Contact</a>
-            <!-- CTA changed from "Book Now" -->
-            <a href="#contact" class="btn-primary" style="margin-left: var(--space-md);">Join Waitlist</a>
+            <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="btn-primary" style="margin-left: var(--space-md);">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
         </nav>
     </header>
 
-    <!-- Hero Section - REWRITTEN -->
+    <!-- Hero Section -->
     <section class="hero section" id="home">
         <div class="hero-content">
-            <!-- Badge text changed -->
-            <div class="hero-badge">Artistry & Vision</div>
+            <div class="hero-badge">Lash Artist & Beauty Specialist</div>
             
-            <h1 class="hero-title">Alex<span>Muschette</span></h1> <!-- Changed -->
+            <h1 class="hero-title">Alex<span>Muschette</span></h1>
             
-            <p class="hero-subtitle">Welcome to Brattitude Lashes, where precision meets passion. I am Alex, a dedicated lash artist crafting bespoke eyelash extensions to highlight your unique beauty. My studio in Luton is coming soon.</p> <!-- Changed -->
+            <p class="hero-subtitle">Creating stunning lash transformations with precision, passion, and artistic vision. Based in Luton, Bedfordshire.</p>
             
-            <!-- Countdown replaced with a vision statement -->
-            <div class="countdown" style="background: rgba(255,255,255,0.05);">
-                <div class="countdown-title">MY PHILOSOPHY</div>
-                <p style="font-size: 1.2rem; color: var(--text-body);">Every set of lashes is a work of art, tailored not just to your eye shape, but to your personality. My goal is to provide a luxurious, comfortable experience that leaves you feeling confident and beautiful.</p>
+            <div style="margin-top: var(--space-xl);">
+                <a href="#portfolio" class="btn-primary">View My Portfolio</a>
+                <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="btn-secondary">
+                    <i class="fab fa-instagram"></i> Follow on Instagram
+                </a>
             </div>
-            
-            <!-- Button now links to portfolio -->
-            <a href="#portfolio" class="btn-primary" style="margin-top: var(--space-xl);">View My Portfolio</a>
         </div>
     </section>
 
-    <!-- Portfolio Section - NEW FOCUS -->
-    <section class="gallery section" id="portfolio"> <!-- Reusing gallery styles -->
+    <!-- Portfolio Section -->
+    <section class="portfolio section" id="portfolio">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Featured <span>Portfolio</span></h2>
-                <p class="section-subtitle">A glimpse into my work. For the full collection, visit my Instagram.</p>
+                <h2 class="section-title">Lash <span>Portfolio</span></h2>
+                <p class="section-subtitle">Browse my work across different lash styles and techniques</p>
             </div>
             
-            <div class="gallery-grid">
-                <!-- PORTFOLIO PLACEHOLDER 1 -->
-                <!-- Replace this image `src` with a direct link to Alex's work from Instagram -->
-                <div class="gallery-item">
-                    <img src="PLACEHOLDER_URL_FOR_ALEX_WORK_1.jpg" alt="Classic Set by Alex">
-                    <div class="gallery-overlay">
-                        <h4>Classic Set</h4>
-                        <p>Elegant & Natural</p>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All Work</button>
+                <button class="filter-btn" data-filter="classic">Classic</button>
+                <button class="filter-btn" data-filter="volume">Volume</button>
+                <button class="filter-btn" data-filter="hybrid">Hybrid</button>
+                <button class="filter-btn" data-filter="megavolume">Mega Volume</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 - Replace with Alex's image -->
+                <div class="portfolio-item" data-category="classic">
+                    <div class="image-placeholder">
+                        <i class="fas fa-camera"></i>
+                        <p>Classic Lash Set</p>
+                        <p>Replace with Alex's work</p>
                     </div>
-                </div>
-                <!-- PORTFOLIO PLACEHOLDER 2 -->
-                <div class="gallery-item">
-                    <img src="PLACEHOLDER_URL_FOR_ALEX_WORK_2.jpg" alt="Volume Set by Alex">
-                    <div class="gallery-overlay">
-                        <h4>Volume Set</h4>
-                        <p>Full & Dramatic</p>
+                    <div class="portfolio-category">Classic</div>
+                    <div class="portfolio-overlay">
+                        <h4>Natural Classic Set</h4>
+                        <p>Elegant 1:1 extension technique</p>
                     </div>
+                    <div class="placeholder-instruction">Replace: Right-click → Copy image link from Instagram</div>
                 </div>
-                <!-- PORTFOLIO PLACEHOLDER 3 -->
-                <div class="gallery-item">
-                    <img src="PLACEHOLDER_URL_FOR_ALEX_WORK_3.jpg" alt="Hybrid Set by Alex">
-                    <div class="gallery-overlay">
-                        <h4>Hybrid Set</h4>
-                        <p>The Perfect Balance</p>
+                
+                <!-- Portfolio Item 2 - Replace with Alex's image -->
+                <div class="portfolio-item" data-category="volume">
+                    <div class="image-placeholder">
+                        <i class="fas fa-star"></i>
+                        <p>Volume Set</p>
+                        <p>Replace with Alex's work</p>
                     </div>
+                    <div class="portfolio-category">Volume</div>
+                    <div class="portfolio-overlay">
+                        <h4>Full Volume Set</h4>
+                        <p>2-3D volume for dramatic look</p>
+                    </div>
+                    <div class="placeholder-instruction">Replace: Right-click → Copy image link from Instagram</div>
                 </div>
-                <!-- PORTFOLIO PLACEHOLDER 4: Link to Instagram -->
-                <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="gallery-item" style="text-decoration: none;">
+                
+                <!-- Portfolio Item 3 - Replace with Alex's image -->
+                <div class="portfolio-item" data-category="hybrid">
+                    <div class="image-placeholder">
+                        <i class="fas fa-heart"></i>
+                        <p>Hybrid Set</p>
+                        <p>Replace with Alex's work</p>
+                    </div>
+                    <div class="portfolio-category">Hybrid</div>
+                    <div class="portfolio-overlay">
+                        <h4>Hybrid Perfection</h4>
+                        <p>Mix of classic and volume</p>
+                    </div>
+                    <div class="placeholder-instruction">Replace: Right-click → Copy image link from Instagram</div>
+                </div>
+                
+                <!-- Portfolio Item 4 - Replace with Alex's image -->
+                <div class="portfolio-item" data-category="megavolume">
+                    <div class="image-placeholder">
+                        <i class="fas fa-crown"></i>
+                        <p>Mega Volume</p>
+                        <p>Replace with Alex's work</p>
+                    </div>
+                    <div class="portfolio-category">Mega Volume</div>
+                    <div class="portfolio-overlay">
+                        <h4>Mega Volume Glam</h4>
+                        <p>5-6D ultra-dramatic look</p>
+                    </div>
+                    <div class="placeholder-instruction">Replace: Right-click → Copy image link from Instagram</div>
+                </div>
+                
+                <!-- Portfolio Item 5 - Replace with Alex's image -->
+                <div class="portfolio-item" data-category="classic">
+                    <div class="image-placeholder">
+                        <i class="fas fa-eye"></i>
+                        <p>Wispy Classic</p>
+                        <p>Replace with Alex's work</p>
+                    </div>
+                    <div class="portfolio-category">Classic</div>
+                    <div class="portfolio-overlay">
+                        <h4>Wispy Classic</h4>
+                        <p>Soft, feathery finish</p>
+                    </div>
+                    <div class="placeholder-instruction">Replace: Right-click → Copy image link from Instagram</div>
+                </div>
+                
+                <!-- Portfolio Item 6 - Instagram Link -->
+                <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="portfolio-item" style="text-decoration: none;">
                     <div style="width:100%; height:100%; background: var(--gradient-1); display:flex; align-items:center; justify-content:center; flex-direction:column; padding: var(--space-xl);">
                         <i class="fab fa-instagram" style="font-size: 4rem; margin-bottom: var(--space-md);"></i>
-                        <h3 style="color: var(--white); text-align: center;">View More on Instagram</h3>
+                        <h3 style="color: var(--white); text-align: center; font-size: 1.8rem;">View More on Instagram</h3>
                         <p style="color: var(--white); text-align: center; margin-top: var(--space-sm);">@_alex.priv___</p>
+                        <p style="color: var(--white); text-align: center; margin-top: var(--space-md); font-size: 0.9rem;">See my latest work and client transformations</p>
                     </div>
                 </a>
             </div>
-            <!-- Strong CTA to follow on Instagram -->
-            <div style="text-align: center; margin-top: var(--space-xl);">
-                <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="btn-primary">
-                    <i class="fab fa-instagram"></i> Follow for Latest Work
+            
+            <div style="text-align: center; margin-top: var(--space-xxl);">
+                <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="btn-primary" style="font-size: 1.3rem; padding: 1.3rem 4rem;">
+                    <i class="fab fa-instagram"></i> Follow My Instagram for Daily Updates
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- About Section - REWRITTEN for Alex -->
+    <!-- About Section -->
     <section class="about section" id="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">About <span>The Artist</span></h2>
-                <p class="section-subtitle">Get to know Alex Muschette</p>
+                <h2 class="section-title">About <span>Alex</span></h2>
+                <p class="section-subtitle">Get to know the artist behind the lashes</p>
             </div>
             
             <div class="about-content">
-                <!-- Replace this image `src` with a great portrait of Alex -->
                 <div class="about-image">
-                    <img src="PLACEHOLDER_URL_FOR_ALEX_PORTRAIT.jpg" alt="Alex Muschette, Lash Artist">
+                    <!-- Replace this with Alex's portrait -->
+                    <div class="image-placeholder" style="height: 500px;">
+                        <i class="fas fa-user"></i>
+                        <p>Portrait of Alex</p>
+                        <p>Replace with Alex's photo</p>
+                    </div>
                 </div>
                 
                 <div class="about-text">
                     <h3>Hi, I'm <span>Alex</span></h3>
-                    <p>My journey into the world of beauty and precision began with a simple belief: that everyone deserves to feel like the best version of themselves. This belief is the heart of Brattitude Lashes.</p>
-                    <p>I am certified in Classic, Hybrid, and Volume lash techniques, and I am committed to continuous education to master the latest styles and industry standards. For me, lash artistry is more than a service—it's a form of personal expression and connection with my clients.</p>
+                    <p>I'm a passionate lash artist based in Luton, Bedfordshire, with a keen eye for detail and a love for enhancing natural beauty. My journey in lash artistry began with a simple belief: everyone deserves to feel confident and beautiful in their own skin.</p>
+                    <p>I specialize in creating customized lash extensions that complement each client's unique eye shape, lifestyle, and personal style. Whether you're looking for a subtle enhancement or a dramatic transformation, I work closely with you to achieve your desired look.</p>
                     
                     <div class="features">
                         <div class="feature">
-                            <div class="feature-icon"><i class="fas fa-award"></i></div>
+                            <div class="feature-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
                             <div class="feature-content">
-                                <h4>Certified Expertise</h4>
-                                <p>Formally trained and certified in advanced techniques.</p>
+                                <h4>Certified Training</h4>
+                                <p>Formally trained in classic, volume, and hybrid techniques</p>
                             </div>
                         </div>
+                        
                         <div class="feature">
-                            <div class="feature-icon"><i class="fas fa-eye"></i></div>
+                            <div class="feature-icon">
+                                <i class="fas fa-hand-sparkles"></i>
+                            </div>
                             <div class="feature-content">
-                                <h4>Detail-Oriented</h4>
-                                <p>Meticulous attention to detail for flawless, safe applications.</p>
+                                <h4>Sanitation Focus</h4>
+                                <p>Highest standards of hygiene and safety</p>
                             </div>
                         </div>
+                        
                         <div class="feature">
-                            <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                            <div class="feature-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
                             <div class="feature-content">
-                                <h4>Passion for Beauty</h4>
-                                <p>Driven by a genuine love for enhancing natural beauty.</p>
+                                <h4>Artistic Vision</h4>
+                                <p>Custom designs for each individual client</p>
                             </div>
                         </div>
+                        
                         <div class="feature">
-                            <div class="feature-icon"><i class="fas fa-users"></i></div>
+                            <div class="feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
                             <div class="feature-content">
-                                <h4>Client-Focused</h4>
-                                <p>Every appointment is a collaborative, personalized experience.</p>
+                                <h4>Client Care</h4>
+                                <p>Comfort and satisfaction are my top priorities</p>
                             </div>
                         </div>
+                    </div>
+                    
+                    <div style="margin-top: var(--space-xl);">
+                        <a href="#contact" class="btn-primary">Get in Touch</a>
+                        <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="btn-secondary">
+                            <i class="fab fa-instagram"></i> DM on Instagram
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Preview Section - REWRITTEN (No Prices) -->
-    <section class="launch-offer section" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Future <span>Services</span></h2>
-                <p class="section-subtitle">A preview of what will be offered at the studio</p>
-            </div>
-            
-            <div class="offer-cards">
-                <!-- Service 1 -->
-                <div class="offer-card">
-                    <div class="offer-header">
-                        <h3>Classic Lashes</h3>
-                        <p>One delicate extension per natural lash for a refined, elegant look.</p>
-                    </div>
-                    <div class="offer-pricing">
-                        <!-- Price removed for pre-launch -->
-                        <div class="savings">Signature Service</div>
-                    </div>
-                    <div class="offer-features">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Natural, elegant enhancement</li>
-                            <li><i class="fas fa-check"></i> Perfect for first-timers</li>
-                            <li><i class="fas fa-check"></i> Lightweight & comfortable</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="offer-card popular">
-                    <div class="offer-header">
-                        <h3>Hybrid Lashes</h3>
-                        <p>A beautiful mix of classic and volume lashes for a fuller, textured effect.</p>
-                    </div>
-                    <div class="offer-pricing">
-                        <div class="savings">Most Popular</div>
-                    </div>
-                    <div class="offer-features">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Balanced volume and definition</li>
-                            <li><i class="fas fa-check"></i> Great for everyday glamour</li>
-                            <li><i class="fas fa-check"></i> Customizable density</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="offer-card">
-                    <div class="offer-header">
-                        <h3>Volume Lashes</h3>
-                        <p>Multiple ultra-fine extensions per lash for maximum drama and impact.</p>
-                    </div>
-                    <div class="offer-pricing">
-                        <div class="savings">Full Glam</div>
-                    </div>
-                    <div class="offer-features">
-                        <ul>
-                            <li><i class="fas fa-check"></i> High-impact, glamorous look</li>
-                            <li><i class="fas fa-check"></i> Lightweight, fan-based technique</li>
-                            <li><i class="fas fa-check"></i> Fully customizable</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: var(--space-xxl);">
-                <p style="font-size: 1.2rem; color: var(--text-secondary);">
-                    <i class="fas fa-seedling" style="color: var(--pink-primary);"></i>
-                    <strong>Studio Launching Soon:</strong> Service details and pricing will be announced when the Luton studio opens. Join the waitlist for exclusive updates.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section - REWRITTEN for Pre-Launch -->
+    <!-- Contact Section -->
     <section class="contact section" id="contact">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Get In <span>Touch</span></h2>
-                <p class="section-subtitle">Connect with me and be the first to know when bookings open</p>
+                <p class="section-subtitle">Contact Alex for consultations and portfolio inquiries</p>
             </div>
             
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Connect <span>With Alex</span></h3>
+                    <h3>Contact <span>Info</span></h3>
+                    
                     <div class="contact-methods">
-                        <!-- Primary link to Instagram -->
                         <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="contact-method">
-                            <div class="method-icon"><i class="fab fa-instagram"></i></div>
+                            <div class="method-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
                             <div class="method-text">
                                 <strong>Instagram Portfolio</strong>
-                                <p>Follow for my latest work and updates</p>
-                                <p><small>@_alex.priv___</small></p>
+                                <p>@_alex.priv___</p>
+                                <p><small>View my latest work and DM for inquiries</small></p>
                             </div>
                         </a>
-                        <!-- General contact -->
+                        
                         <a href="mailto:alex@brattitudelashes.com" class="contact-method">
-                            <div class="method-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
                             <div class="method-text">
-                                <strong>Email for Inquiries</strong>
+                                <strong>Email</strong>
                                 <p>alex@brattitudelashes.com</p>
+                                <p><small>For formal inquiries and consultations</small></p>
                             </div>
                         </a>
-                        <!-- Location -->
+                        
                         <div class="contact-method">
-                            <div class="method-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
                             <div class="method-text">
-                                <strong>Studio Coming Soon</strong>
+                                <strong>Location</strong>
                                 <p>Luton, Bedfordshire</p>
+                                <p><small>Serving the local area</small></p>
                             </div>
                         </div>
                     </div>
+                    
+                    <div style="margin-top: var(--space-xl);">
+                        <h4 style="margin-bottom: var(--space-md); color: var(--pink-primary);">Currently Building My Client Portfolio</h4>
+                        <p>I'm currently accepting new clients for portfolio development at special rates. Contact me to discuss your lash goals!</p>
+                    </div>
                 </div>
                 
-                <!-- Form is now a Waitlist Signup -->
                 <div class="contact-form">
-                    <form id="waitlistForm">
+                    <form id="contactForm">
                         <div class="form-row">
-                            <div class="form-group"><label for="name">Your Name *</label><input type="text" id="name" name="name" required></div>
-                            <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" required></div>
+                            <div class="form-group">
+                                <label for="name">Your Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="interest">I'm most interested in...</label>
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interest">I'm interested in:</label>
                             <select id="interest" name="interest">
                                 <option value="">Select an option</option>
-                                <option value="classic">Classic Lashes</option>
-                                <option value="hybrid">Hybrid Lashes</option>
-                                <option value="volume">Volume Lashes</option>
-                                <option value="notsure">Not sure yet!</option>
+                                <option value="classic">Classic Lash Set</option>
+                                <option value="volume">Volume Lash Set</option>
+                                <option value="hybrid">Hybrid Lash Set</option>
+                                <option value="consultation">Lash Consultation</option>
+                                <option value="portfolio">Portfolio Session</option>
                             </select>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="message">Any questions for Alex?</label>
-                            <textarea id="message" name="message" placeholder="I'd love to hear from you..."></textarea>
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell me about your lash experience and what you're looking for..." required></textarea>
                         </div>
-                        <!-- Submit button text changed -->
-                        <button type="submit" class="btn-primary" style="width: 100%;">Join the Pre-Launch Waitlist</button>
+                        
+                        <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+                        
+                        <p style="text-align: center; margin-top: var(--space-md); font-size: 0.9rem; color: rgba(255, 255, 255, 0.65);">
+                            <i class="fas fa-clock"></i> Response time: Usually within 24 hours
+                        </p>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer - Updated -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <div class="footer-logo">Brattitude<span>Lashes</span></div>
-                    <p class="footer-description">The lash artistry of Alex Muschette. Crafting bespoke beauty in Luton, Bedfordshire. Opening soon.</p>
+                    <div class="footer-logo">Alex<span>Muschette</span></div>
+                    <p class="footer-description">
+                        Professional lash artist specializing in customized eyelash extensions. Creating beauty with precision and care in Luton, Bedfordshire.
+                    </p>
+                    
                     <div class="social-links">
-                        <!-- Social links updated to focus on Instagram -->
-                        <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Explore</h4>
-                        <ul>
-                            <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
-                            <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
-                            <li><a href="#about"><i class="fas fa-chevron-right"></i> The Artist</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Services</h4>
-                        <ul>
-                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Classic Lashes</a></li>
-                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Hybrid Lashes</a></li>
-                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Volume Lashes</a></li>
-                        </ul>
+                        <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
                     </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; <span id="currentYear">2024</span> Brattitude Lashes by Alex Muschette.</p>
-                <p style="margin-top: var(--space-sm);"><span style="color: var(--pink-primary);">Luton, Bedfordshire</span> | Launching Soon</p>
+                <p>&copy; <span id="currentYear">2024</span> Alex Muschette | Lash Artistry Portfolio</p>
+                <p style="margin-top: var(--space-sm);">
+                    <span style="color: var(--pink-primary); font-weight: bold;">Luton, Bedfordshire</span> | 
+                    <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" style="color: var(--pink-secondary); text-decoration: none;">
+                        @_alex.priv___
+                    </a>
+                </p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
+        // Initialize Website
         document.addEventListener('DOMContentLoaded', () => {
-            // 1. Initialize Mobile Menu (unchanged)
+            console.log('✨ Alex Muschette Portfolio Website Initializing...');
+            
+            // Mobile Menu
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const navLinks = document.getElementById('navLinks');
+            
             if (mobileMenuBtn && navLinks) {
                 mobileMenuBtn.addEventListener('click', () => {
                     navLinks.classList.toggle('active');
@@ -348,6 +1121,8 @@
                         ? '<i class="fas fa-times"></i>' 
                         : '<i class="fas fa-bars"></i>';
                 });
+                
+                // Close menu when clicking on a link
                 document.querySelectorAll('.nav-link').forEach(link => {
                     link.addEventListener('click', () => {
                         navLinks.classList.remove('active');
@@ -355,51 +1130,142 @@
                     });
                 });
             }
-
-            // 2. Form Handling for Waitlist
-            const waitlistForm = document.getElementById('waitlistForm');
-            if (waitlistForm) {
-                waitlistForm.addEventListener('submit', function(e) {
+            
+            // Portfolio Filter
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    const filterValue = button.getAttribute('data-filter');
+                    
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Contact Form
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
+                    
+                    // Get form data
+                    const formData = new FormData(this);
+                    const name = formData.get('name');
+                    
+                    // Show loading state
                     const submitBtn = this.querySelector('button[type="submit"]');
                     const originalText = submitBtn.innerHTML;
-                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+                    
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
                     submitBtn.disabled = true;
-                    // Simulate submission
+                    
+                    // Simulate form submission
                     setTimeout(() => {
-                        submitBtn.innerHTML = '<i class="fas fa-check"></i> You're on the List!';
+                        submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
                         submitBtn.style.background = '#25D366';
+                        
+                        // Reset form after 2 seconds
                         setTimeout(() => {
-                            waitlistForm.reset();
+                            contactForm.reset();
                             submitBtn.innerHTML = originalText;
                             submitBtn.disabled = false;
                             submitBtn.style.background = '';
-                        }, 3000);
-                        alert("Thank you! You've been added to our exclusive waitlist. Alex will be in touch with updates soon.");
+                        }, 2000);
+                        
+                        // Show confirmation message
+                        alert(`Thank you, ${name}! Your message has been sent to Alex. She'll get back to you within 24 hours. You can also DM her on Instagram for a faster response.`);
                     }, 1500);
                 });
             }
-
-            // 3. Smooth Scrolling (unchanged)
+            
+            // Smooth Scrolling
             window.addEventListener('scroll', () => {
                 const header = document.getElementById('header');
-                header.classList.toggle('scrolled', window.scrollY > 100);
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                // Update active nav link
+                const sections = document.querySelectorAll('section');
+                const navLinksItems = document.querySelectorAll('.nav-link');
+                
+                let currentSection = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+                
+                navLinksItems.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('active');
+                    }
+                });
             });
+            
+            // Smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
                     if (targetId === '#') return;
+                    
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
-                        window.scrollTo({ top: targetElement.offsetTop - 100, behavior: 'smooth' });
+                        const headerHeight = document.getElementById('header').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
                     }
                 });
             });
-
-            // 4. Update Copyright Year
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Update Current Year
+            const currentYear = document.getElementById('currentYear');
+            if (currentYear) {
+                currentYear.textContent = new Date().getFullYear();
+            }
+            
+            console.log('✅ Portfolio website ready!');
         });
+        
+        // Image Replacement Instructions
+        console.log(`
+🎨 HOW TO ADD ALEX'S INSTAGRAM IMAGES:
+======================================
+1. Go to Alex's Instagram: https://www.instagram.com/_alex.priv___
+2. Click on a photo you want to use
+3. Right-click on the image and select "Copy image address" or "Copy image link"
+4. In the HTML code, find the image placeholders (they look like this):
+   <div class="image-placeholder">...</div>
+5. Replace the ENTIRE <div class="image-placeholder">...</div> with:
+   <img src="PASTE_THE_COPIED_LINK_HERE" alt="Alex's lash work">
+6. Repeat for each portfolio image
+7. For Alex's portrait in the About section, do the same
+
+💡 TIP: Use high-quality images for best results!
+        `);
     </script>
 </body>
 </html>
