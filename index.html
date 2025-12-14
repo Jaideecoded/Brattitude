@@ -15,6 +15,7 @@
     <style>
         /* ===== MASTER DESIGN SYSTEM ===== */
         :root {
+            /* CORE COLOR PALETTE */
             --black: #0a0a0a;
             --dark-gray: #1a1a1a;
             --white: #ffffff;
@@ -22,14 +23,25 @@
             --pink-secondary: #ff66b2;
             --pink-light: #ffb6d9;
             --pink-dark: #c4005a;
+            --pink-glow: #ff2d8e;
             
+            /* GRADIENT COLORS */
             --gradient-1: linear-gradient(135deg, #ff2d8e, #ff66b2);
             --gradient-2: linear-gradient(135deg, #c4005a, #ff2d8e);
             
+            /* TEXT COLORS */
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.95);
+            --text-body: rgba(255, 255, 255, 0.85);
+            --text-muted: rgba(255, 255, 255, 0.65);
+            --border-color: rgba(255, 255, 255, 0.15);
+            
+            /* TYPOGRAPHY */
             --font-heading: 'Dancing Script', cursive;
             --font-body: 'Poppins', sans-serif;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             
+            /* SPACING */
             --space-xs: 0.5rem;
             --space-sm: 1rem;
             --space-md: 1.5rem;
@@ -37,15 +49,21 @@
             --space-xl: 3rem;
             --space-xxl: 5rem;
             
+            /* BORDER RADIUS */
             --radius-sm: 8px;
             --radius-md: 12px;
             --radius-lg: 16px;
             --radius-full: 50px;
             
+            /* SHADOWS */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.4);
             --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.5);
             --shadow-accent: 0 0 30px rgba(255, 45, 142, 0.3);
+            --shadow-accent-md: 0 0 60px rgba(255, 45, 142, 0.2);
         }
         
+        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -60,14 +78,16 @@
         body {
             font-family: var(--font-body);
             background-color: var(--black);
-            color: rgba(255, 255, 255, 0.85);
+            color: var(--text-body);
             line-height: 1.6;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
             position: relative;
             min-height: 100vh;
         }
         
-        /* Animated Background */
+        /* ===== ANIMATED BACKGROUND ===== */
         .animated-bg {
             position: fixed;
             top: 0;
@@ -76,7 +96,8 @@
             height: 100%;
             z-index: -2;
             background: radial-gradient(circle at 20% 50%, rgba(255, 45, 142, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(255, 102, 178, 0.1) 0%, transparent 50%);
+                        radial-gradient(circle at 80% 20%, rgba(255, 102, 178, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 80%, rgba(196, 0, 90, 0.1) 0%, transparent 50%);
             animation: pulse-bg 10s ease-in-out infinite;
         }
         
@@ -85,7 +106,7 @@
             50% { opacity: 0.8; }
         }
         
-        /* Header */
+        /* ===== HEADER ===== */
         .header {
             position: fixed;
             top: 0;
@@ -102,6 +123,12 @@
             transition: var(--transition);
         }
         
+        .header.scrolled {
+            padding: var(--space-sm) var(--space-xl);
+            background: rgba(10, 10, 10, 0.98);
+            box-shadow: var(--shadow-lg);
+        }
+        
         .logo {
             font-family: var(--font-heading);
             font-size: 2.5rem;
@@ -111,10 +138,30 @@
             display: flex;
             align-items: center;
             gap: var(--space-sm);
+            position: relative;
         }
         
         .logo span {
             color: var(--pink-primary);
+            position: relative;
+        }
+        
+        .logo span::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gradient-1);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s ease;
+        }
+        
+        .logo:hover span::after {
+            transform: scaleX(1);
+            transform-origin: left;
         }
         
         .nav-links {
@@ -124,7 +171,7 @@
         }
         
         .nav-link {
-            color: rgba(255, 255, 255, 0.85);
+            color: var(--text-body);
             text-decoration: none;
             font-weight: 500;
             font-size: 1.1rem;
@@ -137,6 +184,21 @@
             color: var(--pink-primary);
         }
         
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--pink-primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -147,7 +209,7 @@
             z-index: 1001;
         }
         
-        /* Hero Section */
+        /* ===== HERO SECTION ===== */
         .hero {
             min-height: 100vh;
             position: relative;
@@ -193,8 +255,9 @@
             font-size: 5rem;
             font-weight: 700;
             margin-bottom: var(--space-md);
-            color: var(--white);
+            color: var(--text-primary);
             line-height: 1.1;
+            text-shadow: 0 0 20px rgba(255, 45, 142, 0.5);
         }
         
         .hero-title span {
@@ -206,14 +269,14 @@
             font-size: 1.8rem;
             font-weight: 400;
             margin-bottom: var(--space-xl);
-            color: rgba(255, 255, 255, 0.95);
+            color: var(--text-secondary);
             line-height: 1.4;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
         }
         
-        /* Buttons */
+        /* ===== BUTTONS ===== */
         .btn-primary {
             display: inline-block;
             padding: 1.2rem 3rem;
@@ -240,6 +303,22 @@
             box-shadow: 0 15px 40px rgba(255, 45, 142, 0.5);
         }
         
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-2);
+            transition: left 0.5s ease;
+            z-index: -1;
+        }
+        
+        .btn-primary:hover::before {
+            left: 0;
+        }
+        
         .btn-secondary {
             display: inline-block;
             padding: 1.2rem 3rem;
@@ -262,7 +341,7 @@
             transform: translateY(-5px);
         }
         
-        /* Portfolio Section */
+        /* ===== PORTFOLIO SECTION ===== */
         .portfolio {
             padding: var(--space-xxl) var(--space-xl);
             position: relative;
@@ -279,7 +358,7 @@
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: var(--space-md);
-            color: var(--white);
+            color: var(--text-primary);
         }
         
         .section-title span {
@@ -288,7 +367,7 @@
         
         .section-subtitle {
             font-size: 1.5rem;
-            color: rgba(255, 255, 255, 0.95);
+            color: var(--text-secondary);
             max-width: 600px;
             margin: 0 auto;
         }
@@ -304,8 +383,8 @@
         .filter-btn {
             padding: var(--space-sm) var(--space-xl);
             background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            color: rgba(255, 255, 255, 0.85);
+            border: 1px solid var(--border-color);
+            color: var(--text-body);
             border-radius: var(--radius-full);
             cursor: pointer;
             transition: var(--transition);
@@ -331,13 +410,13 @@
             position: relative;
             aspect-ratio: 1;
             background: var(--dark-gray);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            border: 1px solid var(--border-color);
             transition: var(--transition);
             cursor: pointer;
         }
         
         .portfolio-item:hover {
-            transform: translateY(-10px);
+            transform: translateY(-15px);
             border-color: var(--pink-primary);
             box-shadow: var(--shadow-lg);
         }
@@ -378,9 +457,10 @@
             border-radius: var(--radius-full);
             font-size: 0.9rem;
             font-weight: 600;
+            z-index: 2;
         }
         
-        /* About Section */
+        /* ===== ABOUT SECTION ===== */
         .about {
             padding: var(--space-xxl) var(--space-xl);
             position: relative;
@@ -416,7 +496,7 @@
             font-family: var(--font-heading);
             font-size: 2.8rem;
             margin-bottom: var(--space-lg);
-            color: var(--white);
+            color: var(--text-primary);
         }
         
         .about-text h3 span {
@@ -426,7 +506,7 @@
         .about-text p {
             font-size: 1.2rem;
             margin-bottom: var(--space-lg);
-            color: rgba(255, 255, 255, 0.85);
+            color: var(--text-body);
             line-height: 1.7;
         }
         
@@ -460,10 +540,10 @@
         .feature-content h4 {
             font-size: 1.3rem;
             margin-bottom: var(--space-xs);
-            color: var(--white);
+            color: var(--text-primary);
         }
         
-        /* Contact Section */
+        /* ===== CONTACT SECTION ===== */
         .contact {
             padding: var(--space-xxl) var(--space-xl);
             position: relative;
@@ -480,7 +560,7 @@
             font-family: var(--font-heading);
             font-size: 2.5rem;
             margin-bottom: var(--space-xl);
-            color: var(--white);
+            color: var(--text-primary);
         }
         
         .contact-info h3 span {
@@ -500,7 +580,7 @@
             padding: var(--space-lg);
             background: rgba(255, 255, 255, 0.05);
             border-radius: var(--radius-lg);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            border: 1px solid var(--border-color);
             transition: var(--transition);
             text-decoration: none;
             color: inherit;
@@ -530,14 +610,18 @@
             display: block;
             font-size: 1.3rem;
             margin-bottom: 4px;
-            color: var(--white);
+            color: var(--text-primary);
+        }
+        
+        .method-text p {
+            color: var(--text-body);
         }
         
         .contact-form {
             background: rgba(255, 255, 255, 0.05);
             padding: var(--space-xl);
             border-radius: var(--radius-lg);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            border: 1px solid var(--border-color);
             backdrop-filter: blur(10px);
         }
         
@@ -555,16 +639,16 @@
             display: block;
             margin-bottom: var(--space-xs);
             font-weight: 600;
-            color: rgba(255, 255, 255, 0.95);
+            color: var(--text-secondary);
         }
         
         input, textarea, select {
             width: 100%;
             padding: 1rem 1.2rem;
             background: rgba(255, 255, 255, 0.07);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            border: 1px solid var(--border-color);
             border-radius: var(--radius-md);
-            color: var(--white);
+            color: var(--text-primary);
             font-family: var(--font-body);
             font-size: 1rem;
             transition: var(--transition);
@@ -581,11 +665,11 @@
             resize: vertical;
         }
         
-        /* Footer */
+        /* ===== FOOTER ===== */
         .footer {
             background-color: var(--black);
             padding: var(--space-xxl) var(--space-xl) var(--space-xl);
-            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            border-top: 1px solid var(--border-color);
         }
         
         .footer-content {
@@ -608,8 +692,42 @@
         }
         
         .footer-description {
-            color: rgba(255, 255, 255, 0.85);
+            color: var(--text-body);
             line-height: 1.7;
+        }
+        
+        .footer-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+        }
+        
+        .footer-column h4 {
+            font-size: 1.3rem;
+            margin-bottom: var(--space-lg);
+            color: var(--text-primary);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer-column a {
+            color: var(--text-body);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .footer-column a:hover {
+            color: var(--pink-primary);
+            padding-left: 5px;
         }
         
         .social-links {
@@ -626,7 +744,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: rgba(255, 255, 255, 0.85);
+            color: var(--text-body);
             font-size: 1.3rem;
             transition: var(--transition);
             text-decoration: none;
@@ -641,22 +759,57 @@
         .footer-bottom {
             text-align: center;
             padding-top: var(--space-xl);
-            border-top: 1px solid rgba(255, 255, 255, 0.15);
-            color: rgba(255, 255, 255, 0.65);
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
             font-size: 0.9rem;
         }
         
-        /* Responsive Design */
+        /* ===== IMAGE PLACEHOLDERS ===== */
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--dark-gray), #2a2a2a);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-xl);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .image-placeholder i {
+            font-size: 3rem;
+            margin-bottom: var(--space-md);
+            color: var(--pink-primary);
+        }
+        
+        .placeholder-instruction {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            color: var(--pink-light);
+            text-align: center;
+            z-index: 3;
+        }
+        
+        /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 1200px) {
             .hero-title { font-size: 4rem; }
-            .portfolio, .about, .contact { padding: var(--space-xl) var(--space-lg); }
+            .section { padding: var(--space-xl) var(--space-lg); }
             .footer-content { grid-template-columns: 1fr 1fr; }
         }
         
         @media (max-width: 992px) {
             .hero-title { font-size: 3.5rem; }
             .section-title { font-size: 3rem; }
-            .about-content, .contact-content { grid-template-columns: 1fr; }
+            .about-content { grid-template-columns: 1fr; }
+            .contact-content { grid-template-columns: 1fr; }
             .portfolio-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
             .footer-content { grid-template-columns: 1fr; gap: var(--space-xl); }
             .mobile-menu-btn { display: block; }
@@ -689,11 +842,12 @@
         @media (max-width: 768px) {
             .hero-title { font-size: 3rem; }
             .hero-subtitle { font-size: 1.5rem; }
-            .portfolio, .about, .contact { padding: var(--space-xl) var(--space-md); }
+            .section { padding: var(--space-xl) var(--space-md); }
             .section-title { font-size: 2.5rem; }
             .portfolio-grid { grid-template-columns: 1fr; }
             .features { grid-template-columns: 1fr; }
             .form-row { grid-template-columns: 1fr; }
+            .footer-links { grid-template-columns: 1fr; }
             .btn-primary, .btn-secondary { padding: 1rem 2.5rem; font-size: 1.1rem; margin-bottom: var(--space-sm); }
             .portfolio-filter { flex-direction: column; align-items: center; }
             .filter-btn { width: 200px; text-align: center; }
@@ -702,43 +856,10 @@
         @media (max-width: 480px) {
             .hero-title { font-size: 2.5rem; }
             .hero-subtitle { font-size: 1.3rem; }
-            .portfolio, .about, .contact { padding: var(--space-xl) var(--space-sm); }
+            .section { padding: var(--space-xl) var(--space-sm); }
             .section-title { font-size: 2.2rem; }
             .btn-primary, .btn-secondary { padding: 0.9rem 2rem; font-size: 1rem; }
             .hero-badge { font-size: 1rem; padding: var(--space-xs) var(--space-lg); }
-        }
-        
-        /* Image Placeholder Styling */
-        .image-placeholder {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, var(--dark-gray), #2a2a2a);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: var(--space-xl);
-            text-align: center;
-            color: rgba(255, 255, 255, 0.7);
-        }
-        
-        .image-placeholder i {
-            font-size: 3rem;
-            margin-bottom: var(--space-md);
-            color: var(--pink-primary);
-        }
-        
-        .placeholder-instruction {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            right: 10px;
-            background: rgba(0, 0, 0, 0.8);
-            padding: var(--space-xs) var(--space-sm);
-            border-radius: var(--radius-sm);
-            font-size: 0.8rem;
-            color: var(--pink-light);
-            text-align: center;
         }
     </style>
 </head>
@@ -800,7 +921,7 @@
             </div>
             
             <div class="portfolio-grid">
-                <!-- Portfolio Item 1 - Replace with Alex's image -->
+                <!-- Portfolio Item 1 - Classic -->
                 <div class="portfolio-item" data-category="classic">
                     <div class="image-placeholder">
                         <i class="fas fa-camera"></i>
@@ -815,7 +936,7 @@
                     <div class="placeholder-instruction">Replace: Right-click → Copy image link from Instagram</div>
                 </div>
                 
-                <!-- Portfolio Item 2 - Replace with Alex's image -->
+                <!-- Portfolio Item 2 - Volume -->
                 <div class="portfolio-item" data-category="volume">
                     <div class="image-placeholder">
                         <i class="fas fa-star"></i>
@@ -830,7 +951,7 @@
                     <div class="placeholder-instruction">Replace: Right-click → Copy image link from Instagram</div>
                 </div>
                 
-                <!-- Portfolio Item 3 - Replace with Alex's image -->
+                <!-- Portfolio Item 3 - Hybrid -->
                 <div class="portfolio-item" data-category="hybrid">
                     <div class="image-placeholder">
                         <i class="fas fa-heart"></i>
@@ -845,7 +966,7 @@
                     <div class="placeholder-instruction">Replace: Right-click → Copy image link from Instagram</div>
                 </div>
                 
-                <!-- Portfolio Item 4 - Replace with Alex's image -->
+                <!-- Portfolio Item 4 - Mega Volume -->
                 <div class="portfolio-item" data-category="megavolume">
                     <div class="image-placeholder">
                         <i class="fas fa-crown"></i>
@@ -860,7 +981,7 @@
                     <div class="placeholder-instruction">Replace: Right-click → Copy image link from Instagram</div>
                 </div>
                 
-                <!-- Portfolio Item 5 - Replace with Alex's image -->
+                <!-- Portfolio Item 5 - Classic -->
                 <div class="portfolio-item" data-category="classic">
                     <div class="image-placeholder">
                         <i class="fas fa-eye"></i>
@@ -909,6 +1030,7 @@
                         <i class="fas fa-user"></i>
                         <p>Portrait of Alex</p>
                         <p>Replace with Alex's photo</p>
+                        <div class="placeholder-instruction">Replace with Alex's portrait photo</div>
                     </div>
                 </div>
                 
@@ -1060,7 +1182,7 @@
                         
                         <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
                         
-                        <p style="text-align: center; margin-top: var(--space-md); font-size: 0.9rem; color: rgba(255, 255, 255, 0.65);">
+                        <p style="text-align: center; margin-top: var(--space-md); font-size: 0.9rem; color: var(--text-muted);">
                             <i class="fas fa-clock"></i> Response time: Usually within 24 hours
                         </p>
                     </form>
@@ -1091,6 +1213,28 @@
                         </a>
                     </div>
                 </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                            <li><a href="#about"><i class="fas fa-chevron-right"></i> About Alex</a></li>
+                            <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Classic Lashes</a></li>
+                            <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Volume Lashes</a></li>
+                            <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Hybrid Lashes</a></li>
+                            <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Mega Volume</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             
             <div class="footer-bottom">
@@ -1106,11 +1250,22 @@
     </footer>
 
     <script>
-        // Initialize Website
+        // ===== INITIALIZE WEBSITE =====
         document.addEventListener('DOMContentLoaded', () => {
             console.log('✨ Alex Muschette Portfolio Website Initializing...');
             
-            // Mobile Menu
+            // Initialize all components
+            initializeMobileMenu();
+            initializePortfolioFilter();
+            initializeContactForm();
+            initializeSmoothScrolling();
+            updateCurrentYear();
+            
+            console.log('✅ Portfolio website ready!');
+        });
+
+        // ===== MOBILE MENU =====
+        function initializeMobileMenu() {
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const navLinks = document.getElementById('navLinks');
             
@@ -1130,8 +1285,10 @@
                     });
                 });
             }
-            
-            // Portfolio Filter
+        }
+
+        // ===== PORTFOLIO FILTER =====
+        function initializePortfolioFilter() {
             const filterButtons = document.querySelectorAll('.filter-btn');
             const portfolioItems = document.querySelectorAll('.portfolio-item');
             
@@ -1153,8 +1310,10 @@
                     });
                 });
             });
-            
-            // Contact Form
+        }
+
+        // ===== CONTACT FORM =====
+        function initializeContactForm() {
             const contactForm = document.getElementById('contactForm');
             
             if (contactForm) {
@@ -1190,8 +1349,11 @@
                     }, 1500);
                 });
             }
-            
-            // Smooth Scrolling
+        }
+
+        // ===== SMOOTH SCROLLING =====
+        function initializeSmoothScrolling() {
+            // Update active nav link on scroll
             window.addEventListener('scroll', () => {
                 const header = document.getElementById('header');
                 if (window.scrollY > 100) {
@@ -1202,7 +1364,7 @@
                 
                 // Update active nav link
                 const sections = document.querySelectorAll('section');
-                const navLinksItems = document.querySelectorAll('.nav-link');
+                const navLinks = document.querySelectorAll('.nav-link');
                 
                 let currentSection = '';
                 sections.forEach(section => {
@@ -1213,7 +1375,7 @@
                     }
                 });
                 
-                navLinksItems.forEach(link => {
+                navLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === `#${currentSection}`) {
                         link.classList.add('active');
@@ -1240,32 +1402,15 @@
                     }
                 });
             });
-            
-            // Update Current Year
+        }
+
+        // ===== UTILITIES =====
+        function updateCurrentYear() {
             const currentYear = document.getElementById('currentYear');
             if (currentYear) {
                 currentYear.textContent = new Date().getFullYear();
             }
-            
-            console.log('✅ Portfolio website ready!');
-        });
-        
-        // Image Replacement Instructions
-        console.log(`
-🎨 HOW TO ADD ALEX'S INSTAGRAM IMAGES:
-======================================
-1. Go to Alex's Instagram: https://www.instagram.com/_alex.priv___
-2. Click on a photo you want to use
-3. Right-click on the image and select "Copy image address" or "Copy image link"
-4. In the HTML code, find the image placeholders (they look like this):
-   <div class="image-placeholder">...</div>
-5. Replace the ENTIRE <div class="image-placeholder">...</div> with:
-   <img src="PASTE_THE_COPIED_LINK_HERE" alt="Alex's lash work">
-6. Repeat for each portfolio image
-7. For Alex's portrait in the About section, do the same
-
-💡 TIP: Use high-quality images for best results!
-        `);
+        }
     </script>
 </body>
 </html>
