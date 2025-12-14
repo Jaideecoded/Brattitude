@@ -3,64 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Muschette | Brattitude Lashes - Lash Artistry Portfolio</title>
-    <meta name="description" content="Professional lash artist Alex Muschette's portfolio. Specializing in classic, hybrid, and volume eyelash extensions in Luton, Bedfordshire.">
+    <title>Alex Muschette | Brattitude Lashes - Premium Lash Artistry</title>
+    <meta name="description" content="Professional lash artist Alex Muschette's portfolio. Specializing in classic, hybrid, and volume eyelash extensions in Chelsea, London.">
     
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* ===== MASTER DESIGN SYSTEM ===== */
+        /* ===== ENHANCED DESIGN SYSTEM ===== */
         :root {
-            /* CORE COLOR PALETTE */
+            /* LUXURY COLOR PALETTE */
             --black: #0a0a0a;
-            --dark-gray: #1a1a1a;
+            --dark-gray: #151515;
+            --charcoal: #1e1e1e;
             --white: #ffffff;
-            --pink-primary: #ff2d8e;
-            --pink-secondary: #ff66b2;
-            --pink-light: #ffb6d9;
-            --pink-dark: #c4005a;
-            --pink-glow: #ff2d8e;
+            --cream: #f8f5f2;
+            --pink-primary: #e75480;
+            --pink-secondary: #ff6b9d;
+            --pink-light: #ffd1dc;
+            --pink-dark: #c2185b;
+            --gold: #d4af37;
+            --gold-light: #f4e4b5;
             
-            /* GRADIENT COLORS */
-            --gradient-1: linear-gradient(135deg, #ff2d8e, #ff66b2);
-            --gradient-2: linear-gradient(135deg, #c4005a, #ff2d8e);
+            /* GRADIENTS */
+            --gradient-1: linear-gradient(135deg, #e75480 0%, #ff6b9d 100%);
+            --gradient-2: linear-gradient(135deg, #c2185b 0%, #e75480 100%);
+            --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f4e4b5 100%);
+            --gradient-dark: linear-gradient(135deg, #151515 0%, #2a2a2a 100%);
             
-            /* TEXT COLORS */
+            /* TEXT */
             --text-primary: #ffffff;
-            --text-secondary: rgba(255, 255, 255, 0.95);
+            --text-secondary: rgba(255, 255, 255, 0.9);
             --text-body: rgba(255, 255, 255, 0.85);
-            --text-muted: rgba(255, 255, 255, 0.65);
-            --border-color: rgba(255, 255, 255, 0.15);
+            --text-muted: rgba(255, 255, 255, 0.6);
+            --border-color: rgba(255, 255, 255, 0.12);
             
             /* TYPOGRAPHY */
-            --font-heading: 'Dancing Script', cursive;
-            --font-body: 'Poppins', sans-serif;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-heading: 'Playfair Display', serif;
+            --font-subheading: 'Dancing Script', cursive;
+            --font-body: 'Inter', sans-serif;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
             
             /* SPACING */
             --space-xs: 0.5rem;
             --space-sm: 1rem;
             --space-md: 1.5rem;
-            --space-lg: 2rem;
-            --space-xl: 3rem;
-            --space-xxl: 5rem;
+            --space-lg: 2.5rem;
+            --space-xl: 4rem;
+            --space-xxl: 6rem;
             
             /* BORDER RADIUS */
             --radius-sm: 8px;
             --radius-md: 12px;
-            --radius-lg: 16px;
+            --radius-lg: 20px;
+            --radius-xl: 30px;
             --radius-full: 50px;
             
             /* SHADOWS */
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-            --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.4);
-            --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.5);
-            --shadow-accent: 0 0 30px rgba(255, 45, 142, 0.3);
-            --shadow-accent-md: 0 0 60px rgba(255, 45, 142, 0.2);
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
+            --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.5);
+            --shadow-lg: 0 15px 50px rgba(0, 0, 0, 0.6);
+            --shadow-accent: 0 0 40px rgba(231, 84, 128, 0.4);
+            --shadow-gold: 0 0 30px rgba(212, 175, 55, 0.3);
         }
         
         /* ===== RESET & BASE ===== */
@@ -72,14 +81,14 @@
         
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 100px;
+            scroll-padding-top: 120px;
         }
         
         body {
             font-family: var(--font-body);
             background-color: var(--black);
             color: var(--text-body);
-            line-height: 1.6;
+            line-height: 1.7;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -87,23 +96,75 @@
             min-height: 100vh;
         }
         
-        /* ===== ANIMATED BACKGROUND ===== */
-        .animated-bg {
+        /* ===== LUXURY BACKGROUND ===== */
+        .luxury-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: -2;
-            background: radial-gradient(circle at 20% 50%, rgba(255, 45, 142, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(255, 102, 178, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 80%, rgba(196, 0, 90, 0.1) 0%, transparent 50%);
-            animation: pulse-bg 10s ease-in-out infinite;
+            background: 
+                radial-gradient(circle at 15% 20%, rgba(231, 84, 128, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 50% 80%, rgba(255, 107, 157, 0.05) 0%, transparent 40%),
+                linear-gradient(180deg, #0a0a0a 0%, #151515 100%);
         }
         
-        @keyframes pulse-bg {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 0.8; }
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,50 Q25,40 50,50 T100,50" stroke="rgba(255,255,255,0.02)" fill="none"/><path d="M0,30 Q25,20 50,30 T100,30" stroke="rgba(255,255,255,0.02)" fill="none"/><path d="M0,70 Q25,60 50,70 T100,70" stroke="rgba(255,255,255,0.02)" fill="none"/></svg>');
+            z-index: -1;
+            opacity: 0.3;
+        }
+        
+        /* ===== PRELOADER ===== */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--black);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+        
+        .preloader-content {
+            text-align: center;
+        }
+        
+        .preloader-logo {
+            font-family: var(--font-subheading);
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .preloader-logo span {
+            color: var(--pink-primary);
+        }
+        
+        .loader {
+            width: 80px;
+            height: 80px;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top-color: var(--pink-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         
         /* ===== HEADER ===== */
@@ -117,9 +178,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 45, 142, 0.2);
+            background: rgba(10, 10, 10, 0.92);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(231, 84, 128, 0.15);
             transition: var(--transition);
         }
         
@@ -130,8 +191,8 @@
         }
         
         .logo {
-            font-family: var(--font-heading);
-            font-size: 2.5rem;
+            font-family: var(--font-subheading);
+            font-size: 2.8rem;
             font-weight: 700;
             color: var(--white);
             text-decoration: none;
@@ -149,19 +210,29 @@
         .logo span::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: 5px;
             left: 0;
             width: 100%;
             height: 2px;
-            background: var(--gradient-1);
+            background: var(--gradient-gold);
             transform: scaleX(0);
             transform-origin: right;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s ease;
         }
         
         .logo:hover span::after {
             transform: scaleX(1);
             transform-origin: left;
+        }
+        
+        .logo-subtitle {
+            font-size: 0.8rem;
+            color: var(--gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-left: var(--space-sm);
+            font-family: var(--font-body);
+            font-weight: 400;
         }
         
         .nav-links {
@@ -191,8 +262,8 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--pink-primary);
-            transition: width 0.3s ease;
+            background: var(--gradient-1);
+            transition: width 0.4s ease;
         }
         
         .nav-link:hover::after, .nav-link.active::after {
@@ -204,9 +275,10 @@
             background: none;
             border: none;
             color: var(--white);
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             cursor: pointer;
             z-index: 1001;
+            padding: var(--space-xs);
         }
         
         /* ===== HERO SECTION ===== */
@@ -218,7 +290,7 @@
             justify-content: center;
             overflow: hidden;
             padding: var(--space-xxl) var(--space-xl);
-            margin-top: 80px;
+            margin-top: 100px;
         }
         
         .hero-content {
@@ -236,33 +308,67 @@
             padding: var(--space-sm) var(--space-xl);
             border-radius: var(--radius-full);
             font-weight: 700;
-            font-size: 1.2rem;
-            letter-spacing: 2px;
+            font-size: 1.1rem;
+            letter-spacing: 3px;
             text-transform: uppercase;
             margin-bottom: var(--space-xl);
-            animation: pulse 2s infinite;
+            animation: float 3s ease-in-out infinite;
             box-shadow: var(--shadow-accent);
             border: 2px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
         }
         
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+        .hero-badge::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--gradient-gold);
+            z-index: -1;
+            border-radius: var(--radius-full);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .hero-badge:hover::before {
+            opacity: 1;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
         
         .hero-title {
             font-family: var(--font-heading);
-            font-size: 5rem;
+            font-size: 5.5rem;
             font-weight: 700;
             margin-bottom: var(--space-md);
             color: var(--text-primary);
             line-height: 1.1;
-            text-shadow: 0 0 20px rgba(255, 45, 142, 0.5);
+            text-shadow: 0 5px 30px rgba(231, 84, 128, 0.4);
         }
         
         .hero-title span {
             color: var(--pink-primary);
             display: block;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero-title span::after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(231, 84, 128, 0.2);
+            z-index: -1;
+            border-radius: 4px;
         }
         
         .hero-subtitle {
@@ -270,37 +376,55 @@
             font-weight: 400;
             margin-bottom: var(--space-xl);
             color: var(--text-secondary);
-            line-height: 1.4;
+            line-height: 1.5;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
         }
         
+        .location-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            background: rgba(255, 255, 255, 0.05);
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-full);
+            margin-top: var(--space-lg);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .location-tag i {
+            color: var(--gold);
+        }
+        
         /* ===== BUTTONS ===== */
         .btn-primary {
-            display: inline-block;
-            padding: 1.2rem 3rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+            padding: 1.3rem 3.5rem;
             background: var(--gradient-1);
             color: var(--white);
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             border-radius: var(--radius-full);
             transition: var(--transition);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             border: none;
             cursor: pointer;
             position: relative;
             overflow: hidden;
             z-index: 1;
-            box-shadow: 0 8px 25px rgba(255, 45, 142, 0.4);
+            box-shadow: 0 10px 30px rgba(231, 84, 128, 0.4);
             margin: 0 var(--space-sm);
         }
         
         .btn-primary:hover {
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(255, 45, 142, 0.5);
+            box-shadow: 0 20px 50px rgba(231, 84, 128, 0.5);
         }
         
         .btn-primary::before {
@@ -311,7 +435,7 @@
             width: 100%;
             height: 100%;
             background: var(--gradient-2);
-            transition: left 0.5s ease;
+            transition: left 0.6s ease;
             z-index: -1;
         }
         
@@ -320,32 +444,50 @@
         }
         
         .btn-secondary {
-            display: inline-block;
-            padding: 1.2rem 3rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+            padding: 1.3rem 3.5rem;
             background: transparent;
             color: var(--white);
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             border-radius: var(--radius-full);
             transition: var(--transition);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             border: 2px solid var(--pink-primary);
             cursor: pointer;
             margin: 0 var(--space-sm);
+            position: relative;
+            overflow: hidden;
         }
         
         .btn-secondary:hover {
-            background: rgba(255, 45, 142, 0.1);
+            background: rgba(231, 84, 128, 0.1);
             transform: translateY(-5px);
+            border-color: var(--pink-secondary);
+            box-shadow: 0 10px 25px rgba(231, 84, 128, 0.2);
+        }
+        
+        .btn-gold {
+            background: var(--gradient-gold);
+            color: var(--charcoal);
+            border: none;
+        }
+        
+        .btn-gold:hover {
+            background: linear-gradient(135deg, #f4e4b5 0%, #d4af37 100%);
+            color: var(--charcoal);
         }
         
         /* ===== PORTFOLIO SECTION ===== */
         .portfolio {
             padding: var(--space-xxl) var(--space-xl);
             position: relative;
-            background: rgba(10, 10, 10, 0.9);
+            background: rgba(15, 15, 15, 0.9);
         }
         
         .section-header {
@@ -355,14 +497,28 @@
         
         .section-title {
             font-family: var(--font-heading);
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 700;
             margin-bottom: var(--space-md);
             color: var(--text-primary);
+            position: relative;
+            display: inline-block;
         }
         
         .section-title span {
             color: var(--pink-primary);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--gradient-1);
+            border-radius: 3px;
         }
         
         .section-subtitle {
@@ -370,6 +526,7 @@
             color: var(--text-secondary);
             max-width: 600px;
             margin: 0 auto;
+            font-weight: 300;
         }
         
         .portfolio-filter {
@@ -389,17 +546,21 @@
             cursor: pointer;
             transition: var(--transition);
             font-weight: 500;
+            position: relative;
+            overflow: hidden;
         }
         
         .filter-btn:hover, .filter-btn.active {
             background: var(--pink-primary);
             color: var(--white);
             border-color: var(--pink-primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-sm);
         }
         
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
             gap: var(--space-xl);
             margin-top: var(--space-xl);
         }
@@ -408,15 +569,16 @@
             border-radius: var(--radius-lg);
             overflow: hidden;
             position: relative;
-            aspect-ratio: 1;
-            background: var(--dark-gray);
+            aspect-ratio: 3/4;
+            background: var(--charcoal);
             border: 1px solid var(--border-color);
             transition: var(--transition);
             cursor: pointer;
+            box-shadow: var(--shadow-md);
         }
         
         .portfolio-item:hover {
-            transform: translateY(-15px);
+            transform: translateY(-15px) scale(1.02);
             border-color: var(--pink-primary);
             box-shadow: var(--shadow-lg);
         }
@@ -425,7 +587,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.7s ease;
+            transition: transform 0.8s ease;
         }
         
         .portfolio-item:hover img {
@@ -437,34 +599,37 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgba(10, 10, 10, 0.9), transparent);
+            background: linear-gradient(to top, rgba(10, 10, 10, 0.95) 30%, transparent);
             padding: var(--space-xl);
-            transform: translateY(100%);
-            transition: var(--transition);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: var(--transition-slow);
         }
         
         .portfolio-item:hover .portfolio-overlay {
             transform: translateY(0);
+            opacity: 1;
         }
         
         .portfolio-category {
             position: absolute;
             top: 20px;
             left: 20px;
-            background: var(--pink-primary);
+            background: var(--gradient-1);
             color: var(--white);
             padding: var(--space-xs) var(--space-md);
             border-radius: var(--radius-full);
             font-size: 0.9rem;
             font-weight: 600;
             z-index: 2;
+            box-shadow: var(--shadow-sm);
         }
         
         /* ===== ABOUT SECTION ===== */
         .about {
             padding: var(--space-xxl) var(--space-xl);
             position: relative;
-            background: rgba(26, 26, 26, 0.9);
+            background: rgba(20, 20, 20, 0.9);
         }
         
         .about-content {
@@ -475,17 +640,18 @@
         }
         
         .about-image {
-            border-radius: var(--radius-lg);
+            border-radius: var(--radius-xl);
             overflow: hidden;
             box-shadow: var(--shadow-lg);
             position: relative;
+            border: 1px solid rgba(231, 84, 128, 0.2);
         }
         
         .about-image img {
             width: 100%;
-            height: 500px;
+            height: 600px;
             object-fit: cover;
-            transition: transform 0.7s ease;
+            transition: transform 0.8s ease;
         }
         
         .about-image:hover img {
@@ -494,9 +660,10 @@
         
         .about-text h3 {
             font-family: var(--font-heading);
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             margin-bottom: var(--space-lg);
             color: var(--text-primary);
+            line-height: 1.2;
         }
         
         .about-text h3 span {
@@ -507,7 +674,21 @@
             font-size: 1.2rem;
             margin-bottom: var(--space-lg);
             color: var(--text-body);
-            line-height: 1.7;
+            line-height: 1.8;
+        }
+        
+        .about-highlight {
+            background: rgba(231, 84, 128, 0.1);
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--pink-primary);
+            margin: var(--space-xl) 0;
+        }
+        
+        .about-highlight p {
+            font-style: italic;
+            color: var(--text-secondary);
+            margin: 0;
         }
         
         .features {
@@ -521,20 +702,31 @@
             display: flex;
             align-items: flex-start;
             gap: var(--space-md);
+            padding: var(--space-md);
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+        }
+        
+        .feature:hover {
+            background: rgba(231, 84, 128, 0.08);
+            border-color: rgba(231, 84, 128, 0.2);
+            transform: translateX(5px);
         }
         
         .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 45, 142, 0.1);
+            width: 70px;
+            height: 70px;
+            background: rgba(231, 84, 128, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--pink-primary);
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             flex-shrink: 0;
-            border: 1px solid rgba(255, 45, 142, 0.3);
+            border: 1px solid rgba(231, 84, 128, 0.3);
         }
         
         .feature-content h4 {
@@ -547,7 +739,7 @@
         .contact {
             padding: var(--space-xxl) var(--space-xl);
             position: relative;
-            background: rgba(10, 10, 10, 0.9);
+            background: rgba(10, 10, 10, 0.95);
         }
         
         .contact-content {
@@ -558,7 +750,7 @@
         
         .contact-info h3 {
             font-family: var(--font-heading);
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: var(--space-xl);
             color: var(--text-primary);
         }
@@ -589,27 +781,27 @@
         .contact-method:hover {
             background: rgba(255, 255, 255, 0.08);
             border-color: var(--pink-primary);
-            transform: translateX(10px);
+            transform: translateX(15px);
         }
         
         .method-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 45, 142, 0.1);
+            width: 70px;
+            height: 70px;
+            background: rgba(231, 84, 128, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--pink-primary);
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             flex-shrink: 0;
-            border: 1px solid rgba(255, 45, 142, 0.3);
+            border: 1px solid rgba(231, 84, 128, 0.3);
         }
         
         .method-text strong {
             display: block;
-            font-size: 1.3rem;
-            margin-bottom: 4px;
+            font-size: 1.4rem;
+            margin-bottom: 5px;
             color: var(--text-primary);
         }
         
@@ -620,9 +812,10 @@
         .contact-form {
             background: rgba(255, 255, 255, 0.05);
             padding: var(--space-xl);
-            border-radius: var(--radius-lg);
+            border-radius: var(--radius-xl);
             border: 1px solid var(--border-color);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
+            box-shadow: var(--shadow-md);
         }
         
         .form-group {
@@ -644,7 +837,7 @@
         
         input, textarea, select {
             width: 100%;
-            padding: 1rem 1.2rem;
+            padding: 1.2rem 1.5rem;
             background: rgba(255, 255, 255, 0.07);
             border: 1px solid var(--border-color);
             border-radius: var(--radius-md);
@@ -657,19 +850,31 @@
         input:focus, textarea:focus, select:focus {
             outline: none;
             border-color: var(--pink-primary);
-            background: rgba(255, 45, 142, 0.12);
+            background: rgba(231, 84, 128, 0.12);
+            box-shadow: 0 0 0 3px rgba(231, 84, 128, 0.1);
         }
         
         textarea {
-            min-height: 150px;
+            min-height: 180px;
             resize: vertical;
         }
         
         /* ===== FOOTER ===== */
         .footer {
-            background-color: var(--black);
+            background-color: var(--charcoal);
             padding: var(--space-xxl) var(--space-xl) var(--space-xl);
-            border-top: 1px solid var(--border-color);
+            border-top: 1px solid rgba(231, 84, 128, 0.2);
+            position: relative;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-1);
         }
         
         .footer-content {
@@ -680,8 +885,8 @@
         }
         
         .footer-logo {
-            font-family: var(--font-heading);
-            font-size: 2.5rem;
+            font-family: var(--font-subheading);
+            font-size: 2.8rem;
             font-weight: 700;
             color: var(--white);
             margin-bottom: var(--space-lg);
@@ -694,6 +899,7 @@
         .footer-description {
             color: var(--text-body);
             line-height: 1.7;
+            font-size: 1.1rem;
         }
         
         .footer-links {
@@ -703,9 +909,22 @@
         }
         
         .footer-column h4 {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             margin-bottom: var(--space-lg);
             color: var(--text-primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer-column h4::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--pink-primary);
+            border-radius: 2px;
         }
         
         .footer-column ul {
@@ -727,7 +946,7 @@
         
         .footer-column a:hover {
             color: var(--pink-primary);
-            padding-left: 5px;
+            padding-left: 10px;
         }
         
         .social-links {
@@ -737,23 +956,25 @@
         }
         
         .social-link {
-            width: 50px;
-            height: 50px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.05);
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--text-body);
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             transition: var(--transition);
             text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .social-link:hover {
             background: var(--pink-primary);
             color: var(--white);
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            border-color: var(--pink-primary);
         }
         
         .footer-bottom {
@@ -761,14 +982,48 @@
             padding-top: var(--space-xl);
             border-top: 1px solid var(--border-color);
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+        }
+        
+        /* ===== SCROLL TO TOP ===== */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: var(--transition);
+            box-shadow: var(--shadow-accent);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .scroll-to-top:hover {
+            transform: translateY(-5px) scale(1.1);
         }
         
         /* ===== IMAGE PLACEHOLDERS ===== */
         .image-placeholder {
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, var(--dark-gray), #2a2a2a);
+            background: var(--gradient-dark);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -776,12 +1031,31 @@
             padding: var(--space-xl);
             text-align: center;
             color: rgba(255, 255, 255, 0.7);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .image-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 30%, rgba(231, 84, 128, 0.05) 50%, transparent 70%);
+            animation: shimmer 2s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
         
         .image-placeholder i {
-            font-size: 3rem;
+            font-size: 4rem;
             margin-bottom: var(--space-md);
             color: var(--pink-primary);
+            z-index: 1;
         }
         
         .placeholder-instruction {
@@ -789,87 +1063,102 @@
             bottom: 10px;
             left: 10px;
             right: 10px;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.9);
             padding: var(--space-xs) var(--space-sm);
             border-radius: var(--radius-sm);
             font-size: 0.8rem;
-            color: var(--pink-light);
+            color: var(--gold-light);
             text-align: center;
             z-index: 3;
         }
         
         /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 1200px) {
-            .hero-title { font-size: 4rem; }
+            .hero-title { font-size: 4.5rem; }
             .section { padding: var(--space-xl) var(--space-lg); }
             .footer-content { grid-template-columns: 1fr 1fr; }
         }
         
         @media (max-width: 992px) {
-            .hero-title { font-size: 3.5rem; }
-            .section-title { font-size: 3rem; }
+            .hero-title { font-size: 4rem; }
+            .section-title { font-size: 3.5rem; }
             .about-content { grid-template-columns: 1fr; }
             .contact-content { grid-template-columns: 1fr; }
-            .portfolio-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+            .portfolio-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
             .footer-content { grid-template-columns: 1fr; gap: var(--space-xl); }
             .mobile-menu-btn { display: block; }
+            .features { grid-template-columns: 1fr; }
             
             .nav-links {
                 position: fixed;
                 top: 0;
-                left: 0;
-                width: 100%;
+                right: -100%;
+                width: 300px;
                 height: 100vh;
                 background: rgba(10, 10, 10, 0.98);
                 flex-direction: column;
                 padding: var(--space-xxl);
-                transform: translateX(-100%);
-                opacity: 0;
-                visibility: hidden;
                 transition: var(--transition);
                 z-index: 1000;
                 justify-content: center;
                 gap: var(--space-xl);
+                backdrop-filter: blur(20px);
+                border-left: 1px solid rgba(231, 84, 128, 0.2);
             }
             
             .nav-links.active {
-                transform: translateX(0);
-                opacity: 1;
-                visibility: visible;
+                right: 0;
             }
         }
         
         @media (max-width: 768px) {
-            .hero-title { font-size: 3rem; }
-            .hero-subtitle { font-size: 1.5rem; }
+            .hero-title { font-size: 3.5rem; }
+            .hero-subtitle { font-size: 1.6rem; }
             .section { padding: var(--space-xl) var(--space-md); }
-            .section-title { font-size: 2.5rem; }
+            .section-title { font-size: 3rem; }
             .portfolio-grid { grid-template-columns: 1fr; }
-            .features { grid-template-columns: 1fr; }
             .form-row { grid-template-columns: 1fr; }
             .footer-links { grid-template-columns: 1fr; }
-            .btn-primary, .btn-secondary { padding: 1rem 2.5rem; font-size: 1.1rem; margin-bottom: var(--space-sm); }
+            .btn-primary, .btn-secondary { padding: 1.2rem 3rem; font-size: 1.1rem; margin-bottom: var(--space-sm); }
             .portfolio-filter { flex-direction: column; align-items: center; }
-            .filter-btn { width: 200px; text-align: center; }
+            .filter-btn { width: 220px; text-align: center; }
+            .hero { margin-top: 80px; }
         }
         
-        @media (max-width: 480px) {
-            .hero-title { font-size: 2.5rem; }
-            .hero-subtitle { font-size: 1.3rem; }
+        @media (max-width: 576px) {
+            .hero-title { font-size: 3rem; }
+            .hero-subtitle { font-size: 1.4rem; }
             .section { padding: var(--space-xl) var(--space-sm); }
-            .section-title { font-size: 2.2rem; }
-            .btn-primary, .btn-secondary { padding: 0.9rem 2rem; font-size: 1rem; }
+            .section-title { font-size: 2.5rem; }
+            .btn-primary, .btn-secondary { padding: 1.1rem 2.5rem; font-size: 1rem; }
             .hero-badge { font-size: 1rem; padding: var(--space-xs) var(--space-lg); }
+            .header { padding: var(--space-sm) var(--space-md); }
+            .nav-links { width: 100%; }
         }
     </style>
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="animated-bg"></div>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">Alex<span>Muschette</span></div>
+            <div class="loader"></div>
+            <p style="margin-top: var(--space-lg); color: var(--pink-light); font-weight: 500;">Loading Luxury Lash Portfolio...</p>
+        </div>
+    </div>
+    
+    <!-- Luxury Background -->
+    <div class="luxury-bg"></div>
+    <div class="bg-overlay"></div>
+    
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
     
     <!-- Header -->
     <header class="header" id="header">
-        <a href="#home" class="logo">Alex<span>Muschette</span></a>
+        <a href="#home" class="logo">Alex<span>Muschette</span><span class="logo-subtitle">LASH ARTIST</span></a>
         
         <button class="mobile-menu-btn" id="mobileMenuBtn">
             <i class="fas fa-bars"></i>
@@ -880,7 +1169,7 @@
             <a href="#portfolio" class="nav-link">Portfolio</a>
             <a href="#about" class="nav-link">About</a>
             <a href="#contact" class="nav-link">Contact</a>
-            <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="btn-primary" style="margin-left: var(--space-md);">
+            <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="btn-primary" style="margin-left: 0;">
                 <i class="fab fa-instagram"></i> Instagram
             </a>
         </nav>
@@ -889,17 +1178,20 @@
     <!-- Hero Section -->
     <section class="hero section" id="home">
         <div class="hero-content">
-            <div class="hero-badge">Lash Artist & Beauty Specialist</div>
+            <div class="hero-badge">Premium Lash Artistry</div>
             
             <h1 class="hero-title">Alex<span>Muschette</span></h1>
             
-            <p class="hero-subtitle">Creating stunning lash transformations with precision, passion, and artistic vision. Based in Luton, Bedfordshire.</p>
+            <p class="hero-subtitle">Transforming beauty with precision, luxury, and artistic vision. Specializing in bespoke lash extensions for the discerning client.</p>
+            
+            <div class="location-tag">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Chelsea, London | Originally from Leicester</span>
+            </div>
             
             <div style="margin-top: var(--space-xl);">
-                <a href="#portfolio" class="btn-primary">View My Portfolio</a>
-                <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="btn-secondary">
-                    <i class="fab fa-instagram"></i> Follow on Instagram
-                </a>
+                <a href="#portfolio" class="btn-primary">View Portfolio</a>
+                <a href="#contact" class="btn-secondary">Book Consultation</a>
             </div>
         </div>
     </section>
@@ -909,7 +1201,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Lash <span>Portfolio</span></h2>
-                <p class="section-subtitle">Browse my work across different lash styles and techniques</p>
+                <p class="section-subtitle">Exquisite lash transformations tailored to each client's unique beauty</p>
             </div>
             
             <div class="portfolio-filter">
@@ -924,92 +1216,93 @@
                 <!-- Portfolio Item 1 - Classic -->
                 <div class="portfolio-item" data-category="classic">
                     <div class="image-placeholder">
-                        <i class="fas fa-camera"></i>
-                        <p>Classic Lash Set</p>
-                        <p>Replace with Alex's work</p>
+                        <i class="fas fa-eye"></i>
+                        <p style="font-size: 1.5rem; margin-bottom: var(--space-xs); z-index: 1;">Classic Lash Set</p>
+                        <p style="z-index: 1;">Elegant 1:1 extension technique</p>
                     </div>
                     <div class="portfolio-category">Classic</div>
                     <div class="portfolio-overlay">
-                        <h4>Natural Classic Set</h4>
-                        <p>Elegant 1:1 extension technique</p>
+                        <h4 style="font-size: 1.8rem; margin-bottom: var(--space-xs);">Natural Classic Set</h4>
+                        <p>Perfect for everyday luxury - enhances natural lashes</p>
                     </div>
-                    <div class="placeholder-instruction">Replace: Right-click → Copy image link from Instagram</div>
+                    <div class="placeholder-instruction">Replace with Alex's work images</div>
                 </div>
                 
                 <!-- Portfolio Item 2 - Volume -->
                 <div class="portfolio-item" data-category="volume">
                     <div class="image-placeholder">
                         <i class="fas fa-star"></i>
-                        <p>Volume Set</p>
-                        <p>Replace with Alex's work</p>
+                        <p style="font-size: 1.5rem; margin-bottom: var(--space-xs); z-index: 1;">Volume Set</p>
+                        <p style="z-index: 1;">2-3D volume for dramatic look</p>
                     </div>
                     <div class="portfolio-category">Volume</div>
                     <div class="portfolio-overlay">
-                        <h4>Full Volume Set</h4>
-                        <p>2-3D volume for dramatic look</p>
+                        <h4 style="font-size: 1.8rem; margin-bottom: var(--space-xs);">Full Volume Set</h4>
+                        <p>Luxurious fullness for special occasions</p>
                     </div>
-                    <div class="placeholder-instruction">Replace: Right-click → Copy image link from Instagram</div>
+                    <div class="placeholder-instruction">Replace with Alex's work images</div>
                 </div>
                 
                 <!-- Portfolio Item 3 - Hybrid -->
                 <div class="portfolio-item" data-category="hybrid">
                     <div class="image-placeholder">
                         <i class="fas fa-heart"></i>
-                        <p>Hybrid Set</p>
-                        <p>Replace with Alex's work</p>
+                        <p style="font-size: 1.5rem; margin-bottom: var(--space-xs); z-index: 1;">Hybrid Set</p>
+                        <p style="z-index: 1;">Best of both worlds</p>
                     </div>
                     <div class="portfolio-category">Hybrid</div>
                     <div class="portfolio-overlay">
-                        <h4>Hybrid Perfection</h4>
-                        <p>Mix of classic and volume</p>
+                        <h4 style="font-size: 1.8rem; margin-bottom: var(--space-xs);">Hybrid Perfection</h4>
+                        <p>Combines classic and volume for dimensional beauty</p>
                     </div>
-                    <div class="placeholder-instruction">Replace: Right-click → Copy image link from Instagram</div>
+                    <div class="placeholder-instruction">Replace with Alex's work images</div>
                 </div>
                 
                 <!-- Portfolio Item 4 - Mega Volume -->
                 <div class="portfolio-item" data-category="megavolume">
                     <div class="image-placeholder">
                         <i class="fas fa-crown"></i>
-                        <p>Mega Volume</p>
-                        <p>Replace with Alex's work</p>
+                        <p style="font-size: 1.5rem; margin-bottom: var(--space-xs); z-index: 1;">Mega Volume</p>
+                        <p style="z-index: 1;">Ultra-dramatic luxury look</p>
                     </div>
                     <div class="portfolio-category">Mega Volume</div>
                     <div class="portfolio-overlay">
-                        <h4>Mega Volume Glam</h4>
-                        <p>5-6D ultra-dramatic look</p>
+                        <h4 style="font-size: 1.8rem; margin-bottom: var(--space-xs);">Mega Volume Glam</h4>
+                        <p>5-6D ultra-dramatic look for maximum impact</p>
                     </div>
-                    <div class="placeholder-instruction">Replace: Right-click → Copy image link from Instagram</div>
+                    <div class="placeholder-instruction">Replace with Alex's work images</div>
                 </div>
                 
                 <!-- Portfolio Item 5 - Classic -->
                 <div class="portfolio-item" data-category="classic">
                     <div class="image-placeholder">
-                        <i class="fas fa-eye"></i>
-                        <p>Wispy Classic</p>
-                        <p>Replace with Alex's work</p>
+                        <i class="fas fa-feather-alt"></i>
+                        <p style="font-size: 1.5rem; margin-bottom: var(--space-xs); z-index: 1;">Wispy Classic</p>
+                        <p style="z-index: 1;">Soft, feathery finish</p>
                     </div>
                     <div class="portfolio-category">Classic</div>
                     <div class="portfolio-overlay">
-                        <h4>Wispy Classic</h4>
-                        <p>Soft, feathery finish</p>
+                        <h4 style="font-size: 1.8rem; margin-bottom: var(--space-xs);">Wispy Classic</h4>
+                        <p>Delicate, feather-like lashes for a romantic look</p>
                     </div>
-                    <div class="placeholder-instruction">Replace: Right-click → Copy image link from Instagram</div>
+                    <div class="placeholder-instruction">Replace with Alex's work images</div>
                 </div>
                 
                 <!-- Portfolio Item 6 - Instagram Link -->
                 <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="portfolio-item" style="text-decoration: none;">
-                    <div style="width:100%; height:100%; background: var(--gradient-1); display:flex; align-items:center; justify-content:center; flex-direction:column; padding: var(--space-xl);">
-                        <i class="fab fa-instagram" style="font-size: 4rem; margin-bottom: var(--space-md);"></i>
-                        <h3 style="color: var(--white); text-align: center; font-size: 1.8rem;">View More on Instagram</h3>
-                        <p style="color: var(--white); text-align: center; margin-top: var(--space-sm);">@_alex.priv___</p>
-                        <p style="color: var(--white); text-align: center; margin-top: var(--space-md); font-size: 0.9rem;">See my latest work and client transformations</p>
+                    <div style="width:100%; height:100%; background: var(--gradient-1); display:flex; align-items:center; justify-content:center; flex-direction:column; padding: var(--space-xl); position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(45deg, rgba(0,0,0,0.1) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1) 75%, transparent 75%, transparent); background-size: 20px 20px;"></div>
+                        <i class="fab fa-instagram" style="font-size: 4.5rem; margin-bottom: var(--space-md); z-index: 1;"></i>
+                        <h3 style="color: var(--white); text-align: center; font-size: 2rem; margin-bottom: var(--space-sm); z-index: 1;">View More on Instagram</h3>
+                        <p style="color: var(--white); text-align: center; margin-bottom: var(--space-xs); font-size: 1.2rem; z-index: 1;">@_alex.priv___</p>
+                        <p style="color: var(--white); text-align: center; margin-top: var(--space-md); font-size: 1rem; z-index: 1; max-width: 300px;">See my latest work, client transformations, and behind-the-scenes</p>
                     </div>
                 </a>
             </div>
             
             <div style="text-align: center; margin-top: var(--space-xxl);">
-                <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="btn-primary" style="font-size: 1.3rem; padding: 1.3rem 4rem;">
-                    <i class="fab fa-instagram"></i> Follow My Instagram for Daily Updates
+                <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="btn-primary btn-gold" style="font-size: 1.3rem; padding: 1.5rem 4.5rem;">
+                    <i class="fab fa-instagram"></i> Follow for Daily Updates
                 </a>
             </div>
         </div>
@@ -1020,33 +1313,37 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">About <span>Alex</span></h2>
-                <p class="section-subtitle">Get to know the artist behind the lashes</p>
+                <p class="section-subtitle">The artist behind the lashes</p>
             </div>
             
             <div class="about-content">
                 <div class="about-image">
                     <!-- Replace this with Alex's portrait -->
-                    <div class="image-placeholder" style="height: 500px;">
-                        <i class="fas fa-user"></i>
-                        <p>Portrait of Alex</p>
-                        <p>Replace with Alex's photo</p>
-                        <div class="placeholder-instruction">Replace with Alex's portrait photo</div>
+                    <div class="image-placeholder" style="height: 600px;">
+                        <i class="fas fa-user-circle"></i>
+                        <p style="font-size: 1.5rem; margin-bottom: var(--space-xs); z-index: 1;">Portrait of Alex</p>
+                        <p style="z-index: 1;">Lash Artist & Beauty Specialist</p>
+                        <div class="placeholder-instruction">Replace with Alex's professional portrait</div>
                     </div>
                 </div>
                 
                 <div class="about-text">
                     <h3>Hi, I'm <span>Alex</span></h3>
-                    <p>I'm a passionate lash artist based in Luton, Bedfordshire, with a keen eye for detail and a love for enhancing natural beauty. My journey in lash artistry began with a simple belief: everyone deserves to feel confident and beautiful in their own skin.</p>
-                    <p>I specialize in creating customized lash extensions that complement each client's unique eye shape, lifestyle, and personal style. Whether you're looking for a subtle enhancement or a dramatic transformation, I work closely with you to achieve your desired look.</p>
+                    <p>Originally from Leicester and now based in Chelsea, London, I'm a passionate lash artist with a refined eye for beauty and detail. My journey in lash artistry began with a simple belief: that everyone deserves to feel confident, beautiful, and pampered.</p>
+                    <p>I specialize in creating bespoke lash extensions that are meticulously tailored to complement each client's unique eye shape, facial features, and personal style. My approach combines technical precision with artistic vision to deliver results that are both stunning and harmonious.</p>
+                    
+                    <div class="about-highlight">
+                        <p>"My philosophy is simple: enhance natural beauty with precision, care, and artistry. Each set of lashes I create is a work of art, designed to make you feel like the best version of yourself."</p>
+                    </div>
                     
                     <div class="features">
                         <div class="feature">
                             <div class="feature-icon">
-                                <i class="fas fa-graduation-cap"></i>
+                                <i class="fas fa-award"></i>
                             </div>
                             <div class="feature-content">
-                                <h4>Certified Training</h4>
-                                <p>Formally trained in classic, volume, and hybrid techniques</p>
+                                <h4>Advanced Certification</h4>
+                                <p>Extensively trained in classic, volume, hybrid, and mega volume techniques</p>
                             </div>
                         </div>
                         
@@ -1055,8 +1352,8 @@
                                 <i class="fas fa-hand-sparkles"></i>
                             </div>
                             <div class="feature-content">
-                                <h4>Sanitation Focus</h4>
-                                <p>Highest standards of hygiene and safety</p>
+                                <h4>Luxury Sanitation</h4>
+                                <p>Highest standards of hygiene, safety, and client comfort</p>
                             </div>
                         </div>
                         
@@ -1065,26 +1362,26 @@
                                 <i class="fas fa-palette"></i>
                             </div>
                             <div class="feature-content">
-                                <h4>Artistic Vision</h4>
-                                <p>Custom designs for each individual client</p>
+                                <h4>Artistic Customization</h4>
+                                <p>Each design is uniquely tailored to the individual</p>
                             </div>
                         </div>
                         
                         <div class="feature">
                             <div class="feature-icon">
-                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-gem"></i>
                             </div>
                             <div class="feature-content">
-                                <h4>Client Care</h4>
-                                <p>Comfort and satisfaction are my top priorities</p>
+                                <h4>Luxury Experience</h4>
+                                <p>Premium products and a relaxing, elevated service</p>
                             </div>
                         </div>
                     </div>
                     
                     <div style="margin-top: var(--space-xl);">
-                        <a href="#contact" class="btn-primary">Get in Touch</a>
+                        <a href="#contact" class="btn-primary">Book Appointment</a>
                         <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="btn-secondary">
-                            <i class="fab fa-instagram"></i> DM on Instagram
+                            <i class="fab fa-instagram"></i> View Instagram
                         </a>
                     </div>
                 </div>
@@ -1097,7 +1394,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Get In <span>Touch</span></h2>
-                <p class="section-subtitle">Contact Alex for consultations and portfolio inquiries</p>
+                <p class="section-subtitle">Contact Alex for consultations, appointments, and portfolio inquiries</p>
             </div>
             
             <div class="contact-content">
@@ -1112,7 +1409,7 @@
                             <div class="method-text">
                                 <strong>Instagram Portfolio</strong>
                                 <p>@_alex.priv___</p>
-                                <p><small>View my latest work and DM for inquiries</small></p>
+                                <p><small>View my latest work and DM for fastest response</small></p>
                             </div>
                         </a>
                         
@@ -1122,7 +1419,7 @@
                             </div>
                             <div class="method-text">
                                 <strong>Email</strong>
-                                <p>alex@brattitudelashes.com</p>
+                                <p>hello@alexmuschette.com</p>
                                 <p><small>For formal inquiries and consultations</small></p>
                             </div>
                         </a>
@@ -1133,15 +1430,16 @@
                             </div>
                             <div class="method-text">
                                 <strong>Location</strong>
-                                <p>Luton, Bedfordshire</p>
-                                <p><small>Serving the local area</small></p>
+                                <p>Chelsea, London</p>
+                                <p><small>Serving Chelsea and surrounding areas</small></p>
+                                <p><small>Originally from Leicester</small></p>
                             </div>
                         </div>
                     </div>
                     
-                    <div style="margin-top: var(--space-xl);">
-                        <h4 style="margin-bottom: var(--space-md); color: var(--pink-primary);">Currently Building My Client Portfolio</h4>
-                        <p>I'm currently accepting new clients for portfolio development at special rates. Contact me to discuss your lash goals!</p>
+                    <div style="margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(212, 175, 55, 0.05); border-radius: var(--radius-lg); border: 1px solid rgba(212, 175, 55, 0.2);">
+                        <h4 style="margin-bottom: var(--space-md); color: var(--gold); display: flex; align-items: center; gap: var(--space-sm);"><i class="fas fa-crown"></i> Luxury Client Experience</h4>
+                        <p>I provide a premium, personalized service in a private Chelsea studio. Each appointment includes a thorough consultation, luxury products, and meticulous attention to detail to ensure your complete satisfaction.</p>
                     </div>
                 </div>
                 
@@ -1166,10 +1464,11 @@
                         <div class="form-group">
                             <label for="interest">I'm interested in:</label>
                             <select id="interest" name="interest">
-                                <option value="">Select an option</option>
+                                <option value="">Select a service</option>
                                 <option value="classic">Classic Lash Set</option>
                                 <option value="volume">Volume Lash Set</option>
                                 <option value="hybrid">Hybrid Lash Set</option>
+                                <option value="megavolume">Mega Volume Set</option>
                                 <option value="consultation">Lash Consultation</option>
                                 <option value="portfolio">Portfolio Session</option>
                             </select>
@@ -1177,13 +1476,13 @@
                         
                         <div class="form-group">
                             <label for="message">Your Message *</label>
-                            <textarea id="message" name="message" placeholder="Tell me about your lash experience and what you're looking for..." required></textarea>
+                            <textarea id="message" name="message" placeholder="Tell me about your lash experience, preferences, and what you're looking to achieve..." required></textarea>
                         </div>
                         
                         <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
                         
-                        <p style="text-align: center; margin-top: var(--space-md); font-size: 0.9rem; color: var(--text-muted);">
-                            <i class="fas fa-clock"></i> Response time: Usually within 24 hours
+                        <p style="text-align: center; margin-top: var(--space-md); font-size: 0.9rem; color: var(--text-muted); display: flex; align-items: center; justify-content: center; gap: var(--space-xs);">
+                            <i class="fas fa-clock"></i> Response time: Typically within 12-24 hours
                         </p>
                     </form>
                 </div>
@@ -1198,7 +1497,7 @@
                 <div class="footer-brand">
                     <div class="footer-logo">Alex<span>Muschette</span></div>
                     <p class="footer-description">
-                        Professional lash artist specializing in customized eyelash extensions. Creating beauty with precision and care in Luton, Bedfordshire.
+                        Premium lash artistry by Alex Muschette. Offering bespoke eyelash extensions with luxury service in Chelsea, London.
                     </p>
                     
                     <div class="social-links">
@@ -1209,14 +1508,14 @@
                             <i class="fab fa-tiktok"></i>
                         </a>
                         <a href="#" class="social-link">
-                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-pinterest-p"></i>
                         </a>
                     </div>
                 </div>
                 
                 <div class="footer-links">
                     <div class="footer-column">
-                        <h4>Explore</h4>
+                        <h4>Navigation</h4>
                         <ul>
                             <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
                             <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
@@ -1238,10 +1537,11 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; <span id="currentYear">2024</span> Alex Muschette | Lash Artistry Portfolio</p>
-                <p style="margin-top: var(--space-sm);">
-                    <span style="color: var(--pink-primary); font-weight: bold;">Luton, Bedfordshire</span> | 
-                    <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" style="color: var(--pink-secondary); text-decoration: none;">
+                <p>&copy; <span id="currentYear">2024</span> Alex Muschette | Premium Lash Artistry Portfolio</p>
+                <p style="margin-top: var(--space-sm); display: flex; align-items: center; justify-content: center; gap: var(--space-sm); flex-wrap: wrap;">
+                    <span style="color: var(--gold); font-weight: bold;">Chelsea, London</span> | 
+                    <span style="color: var(--pink-light);">Originally from Leicester</span> | 
+                    <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" style="color: var(--pink-secondary); text-decoration: none; font-weight: 500;">
                         @_alex.priv___
                     </a>
                 </p>
@@ -1252,17 +1552,32 @@
     <script>
         // ===== INITIALIZE WEBSITE =====
         document.addEventListener('DOMContentLoaded', () => {
-            console.log('✨ Alex Muschette Portfolio Website Initializing...');
+            console.log('✨ Alex Muschette Luxury Portfolio Initializing...');
             
             // Initialize all components
+            initializePreloader();
             initializeMobileMenu();
             initializePortfolioFilter();
             initializeContactForm();
             initializeSmoothScrolling();
+            initializeScrollToTop();
             updateCurrentYear();
             
-            console.log('✅ Portfolio website ready!');
+            console.log('✅ Luxury portfolio website ready!');
         });
+
+        // ===== PRELOADER =====
+        function initializePreloader() {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                window.addEventListener('load', () => {
+                    setTimeout(() => {
+                        preloader.style.opacity = '0';
+                        preloader.style.visibility = 'hidden';
+                    }, 800);
+                });
+            }
+        }
 
         // ===== MOBILE MENU =====
         function initializeMobileMenu() {
@@ -1284,6 +1599,14 @@
                         mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
                     });
                 });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                });
             }
         }
 
@@ -1295,18 +1618,41 @@
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.style.transform = 'translateY(0)';
+                    });
+                    
                     // Add active class to clicked button
                     button.classList.add('active');
+                    button.style.transform = 'translateY(-3px)';
                     
                     const filterValue = button.getAttribute('data-filter');
                     
-                    portfolioItems.forEach(item => {
-                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
+                    // Animate portfolio items
+                    portfolioItems.forEach((item, index) => {
+                        // Set timeout for staggered animation
+                        setTimeout(() => {
+                            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                                item.style.opacity = '0';
+                                item.style.transform = 'translateY(20px)';
+                                
+                                setTimeout(() => {
+                                    item.style.display = 'block';
+                                    setTimeout(() => {
+                                        item.style.opacity = '1';
+                                        item.style.transform = 'translateY(0)';
+                                    }, 50);
+                                }, 300);
+                            } else {
+                                item.style.opacity = '0';
+                                item.style.transform = 'translateY(20px)';
+                                
+                                setTimeout(() => {
+                                    item.style.display = 'none';
+                                }, 300);
+                            }
+                        }, index * 50); // Stagger the animations
                     });
                 });
             });
@@ -1323,29 +1669,65 @@
                     // Get form data
                     const formData = new FormData(this);
                     const name = formData.get('name');
+                    const email = formData.get('email');
+                    const interest = formData.get('interest');
+                    
+                    // Validate form
+                    if (!name || !email) {
+                        alert('Please fill in all required fields.');
+                        return;
+                    }
                     
                     // Show loading state
                     const submitBtn = this.querySelector('button[type="submit"]');
                     const originalText = submitBtn.innerHTML;
+                    const originalBg = submitBtn.style.background;
                     
                     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
                     submitBtn.disabled = true;
                     
-                    // Simulate form submission
+                    // Simulate form submission with delay
                     setTimeout(() => {
                         submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                        submitBtn.style.background = '#25D366';
+                        submitBtn.style.background = 'var(--gradient-gold)';
+                        submitBtn.style.color = 'var(--charcoal)';
                         
-                        // Reset form after 2 seconds
-                        setTimeout(() => {
+                        // Create a more elegant confirmation
+                        const confirmationMsg = document.createElement('div');
+                        confirmationMsg.innerHTML = `
+                            <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; align-items: center; justify-content: center; z-index: 9999; padding: 20px;">
+                                <div style="background: var(--charcoal); padding: 40px; border-radius: 20px; max-width: 500px; width: 100%; border: 2px solid var(--pink-primary); box-shadow: 0 20px 60px rgba(0,0,0,0.8); text-align: center;">
+                                    <i class="fas fa-check-circle" style="font-size: 4rem; color: var(--pink-primary); margin-bottom: 20px;"></i>
+                                    <h3 style="color: var(--white); margin-bottom: 15px;">Thank You, ${name}!</h3>
+                                    <p style="color: var(--text-body); margin-bottom: 25px;">Your message has been sent to Alex. She'll get back to you within 24 hours. For faster response, you can DM her on Instagram.</p>
+                                    <button id="closeConfirmation" style="background: var(--gradient-1); color: white; border: none; padding: 12px 30px; border-radius: 50px; cursor: pointer; font-weight: 600; font-size: 1rem;">Close</button>
+                                </div>
+                            </div>
+                        `;
+                        
+                        document.body.appendChild(confirmationMsg);
+                        
+                        // Close confirmation when button is clicked
+                        document.getElementById('closeConfirmation').addEventListener('click', () => {
+                            confirmationMsg.remove();
                             contactForm.reset();
                             submitBtn.innerHTML = originalText;
                             submitBtn.disabled = false;
-                            submitBtn.style.background = '';
-                        }, 2000);
+                            submitBtn.style.background = originalBg;
+                            submitBtn.style.color = '';
+                        });
                         
-                        // Show confirmation message
-                        alert(`Thank you, ${name}! Your message has been sent to Alex. She'll get back to you within 24 hours. You can also DM her on Instagram for a faster response.`);
+                        // Close confirmation when clicking outside
+                        confirmationMsg.addEventListener('click', (e) => {
+                            if (e.target === confirmationMsg) {
+                                confirmationMsg.remove();
+                                contactForm.reset();
+                                submitBtn.innerHTML = originalText;
+                                submitBtn.disabled = false;
+                                submitBtn.style.background = originalBg;
+                                submitBtn.style.color = '';
+                            }
+                        });
                     }, 1500);
                 });
             }
@@ -1368,7 +1750,7 @@
                 
                 let currentSection = '';
                 sections.forEach(section => {
-                    const sectionTop = section.offsetTop - 100;
+                    const sectionTop = section.offsetTop - 120;
                     const sectionHeight = section.clientHeight;
                     if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
                         currentSection = section.getAttribute('id');
@@ -1386,10 +1768,10 @@
             // Smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
                     const targetId = this.getAttribute('href');
                     if (targetId === '#') return;
                     
+                    e.preventDefault();
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
                         const headerHeight = document.getElementById('header').offsetHeight;
@@ -1400,6 +1782,26 @@
                             behavior: 'smooth'
                         });
                     }
+                });
+            });
+        }
+
+        // ===== SCROLL TO TOP =====
+        function initializeScrollToTop() {
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    scrollToTopBtn.classList.add('visible');
+                } else {
+                    scrollToTopBtn.classList.remove('visible');
+                }
+            });
+            
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
                 });
             });
         }
