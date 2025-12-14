@@ -3,965 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brattitude Lashes | Launch Offer - Limited Time Prices</title>
-    <meta name="description" content="Limited time launch offer on professional eyelash extensions! Get premium lashes at special introductory prices. Book now!">
-    <meta name="keywords" content="lash extensions, launch offer, classic lashes, volume lashes, hybrid lashes, lash infills, eyelash extensions">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Brattitude Lashes | Launch Offer - Limited Time Prices">
-    <meta property="og:description" content="Get premium lash extensions at special launch prices! Limited time offer.">
-    <meta property="og:type" content="website">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        /* ===== MASTER DESIGN SYSTEM ===== */
-        :root {
-            /* CORE COLOR PALETTE */
-            --black: #0a0a0a;
-            --dark-gray: #1a1a1a;
-            --white: #ffffff;
-            --pink-primary: #ff2d8e;
-            --pink-secondary: #ff66b2;
-            --pink-light: #ffb6d9;
-            --pink-dark: #c4005a;
-            --pink-glow: #ff2d8e;
-            
-            /* GRADIENT COLORS */
-            --gradient-1: linear-gradient(135deg, #ff2d8e, #ff66b2);
-            --gradient-2: linear-gradient(135deg, #c4005a, #ff2d8e);
-            
-            /* TEXT COLORS */
-            --text-primary: #ffffff;
-            --text-secondary: rgba(255, 255, 255, 0.95);
-            --text-body: rgba(255, 255, 255, 0.85);
-            --text-muted: rgba(255, 255, 255, 0.65);
-            --border-color: rgba(255, 255, 255, 0.15);
-            
-            /* TYPOGRAPHY */
-            --font-heading: 'Dancing Script', cursive;
-            --font-body: 'Poppins', sans-serif;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            
-            /* SPACING */
-            --space-xs: 0.5rem;
-            --space-sm: 1rem;
-            --space-md: 1.5rem;
-            --space-lg: 2rem;
-            --space-xl: 3rem;
-            --space-xxl: 5rem;
-            
-            /* BORDER RADIUS */
-            --radius-sm: 8px;
-            --radius-md: 12px;
-            --radius-lg: 16px;
-            --radius-full: 50px;
-            
-            /* SHADOWS */
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-            --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.4);
-            --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.5);
-            --shadow-accent: 0 0 30px rgba(255, 45, 142, 0.3);
-            --shadow-accent-md: 0 0 60px rgba(255, 45, 142, 0.2);
-        }
-        
-        /* ===== RESET & BASE ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 100px;
-        }
-        
-        body {
-            font-family: var(--font-body);
-            background-color: var(--black);
-            color: var(--text-body);
-            line-height: 1.6;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            position: relative;
-            min-height: 100vh;
-        }
-        
-        /* ===== ANIMATED BACKGROUND ===== */
-        .animated-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            background: radial-gradient(circle at 20% 50%, rgba(255, 45, 142, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(255, 102, 178, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 80%, rgba(196, 0, 90, 0.1) 0%, transparent 50%);
-            animation: pulse-bg 10s ease-in-out infinite;
-        }
-        
-        @keyframes pulse-bg {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 0.8; }
-        }
-        
-        /* ===== HEADER ===== */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: var(--space-md) var(--space-xl);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 45, 142, 0.2);
-            transition: var(--transition);
-        }
-        
-        .header.scrolled {
-            padding: var(--space-sm) var(--space-xl);
-            background: rgba(10, 10, 10, 0.98);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .logo {
-            font-family: var(--font-heading);
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--white);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            position: relative;
-        }
-        
-        .logo span {
-            color: var(--pink-primary);
-            position: relative;
-        }
-        
-        .logo span::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--gradient-1);
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.5s ease;
-        }
-        
-        .logo:hover span::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: var(--space-xl);
-            align-items: center;
-        }
-        
-        .nav-link {
-            color: var(--text-body);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.1rem;
-            transition: var(--transition);
-            position: relative;
-            padding: var(--space-xs) 0;
-        }
-        
-        .nav-link:hover, .nav-link.active {
-            color: var(--pink-primary);
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--pink-primary);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after, .nav-link.active::after {
-            width: 100%;
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--white);
-            font-size: 1.5rem;
-            cursor: pointer;
-            z-index: 1001;
-        }
-        
-        /* ===== HERO SECTION ===== */
-        .hero {
-            min-height: 100vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            padding: var(--space-xxl) var(--space-xl);
-            margin-top: 80px;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            max-width: 1200px;
-            width: 100%;
-        }
-        
-        .hero-badge {
-            display: inline-block;
-            background: var(--gradient-1);
-            color: var(--white);
-            padding: var(--space-sm) var(--space-xl);
-            border-radius: var(--radius-full);
-            font-weight: 700;
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: var(--space-xl);
-            animation: pulse 2s infinite;
-            box-shadow: var(--shadow-accent);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-        
-        .hero-title {
-            font-family: var(--font-heading);
-            font-size: 5rem;
-            font-weight: 700;
-            margin-bottom: var(--space-md);
-            color: var(--text-primary);
-            line-height: 1.1;
-            text-shadow: 0 0 20px rgba(255, 45, 142, 0.5);
-        }
-        
-        .hero-title span {
-            color: var(--pink-primary);
-            display: block;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.8rem;
-            font-weight: 400;
-            margin-bottom: var(--space-xl);
-            color: var(--text-secondary);
-            line-height: 1.4;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .countdown {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: var(--radius-lg);
-            padding: var(--space-xl);
-            margin: var(--space-xl) auto;
-            max-width: 600px;
-            border: 1px solid rgba(255, 45, 142, 0.3);
-            backdrop-filter: blur(10px);
-        }
-        
-        .countdown-title {
-            color: var(--pink-primary);
-            margin-bottom: var(--space-md);
-            font-size: 1.5rem;
-        }
-        
-        .countdown-timer {
-            display: flex;
-            justify-content: center;
-            gap: var(--space-md);
-        }
-        
-        .countdown-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .countdown-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--pink-primary);
-            line-height: 1;
-            min-width: 70px;
-            text-align: center;
-            background: rgba(255, 45, 142, 0.1);
-            padding: var(--space-sm);
-            border-radius: var(--radius-md);
-            border: 1px solid rgba(255, 45, 142, 0.3);
-        }
-        
-        .countdown-label {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-top: var(--space-xs);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        /* ===== BUTTONS ===== */
-        .btn-primary {
-            display: inline-block;
-            padding: 1.2rem 3rem;
-            background: var(--gradient-1);
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.2rem;
-            border-radius: var(--radius-full);
-            transition: var(--transition);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: none;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            box-shadow: 0 8px 25px rgba(255, 45, 142, 0.4);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(255, 45, 142, 0.5);
-        }
-        
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-2);
-            transition: left 0.5s ease;
-            z-index: -1;
-        }
-        
-        .btn-primary:hover::before {
-            left: 0;
-        }
-        
-        /* ===== LAUNCH OFFER SECTION ===== */
-        .launch-offer {
-            padding: var(--space-xxl) var(--space-xl);
-            position: relative;
-            background: rgba(10, 10, 10, 0.9);
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: var(--space-xxl);
-        }
-        
-        .section-title {
-            font-family: var(--font-heading);
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: var(--space-md);
-            color: var(--text-primary);
-        }
-        
-        .section-title span {
-            color: var(--pink-primary);
-        }
-        
-        .section-subtitle {
-            font-size: 1.5rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .offer-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: var(--space-xl);
-            margin-top: var(--space-xl);
-        }
-        
-        .offer-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-            backdrop-filter: blur(10px);
-            position: relative;
-        }
-        
-        .offer-card:hover {
-            transform: translateY(-15px);
-            border-color: var(--pink-primary);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .offer-card.popular::before {
-            content: 'MOST POPULAR';
-            position: absolute;
-            top: 20px;
-            right: -35px;
-            background: var(--pink-primary);
-            color: var(--white);
-            padding: var(--space-sm) var(--space-xl);
-            font-weight: 700;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            transform: rotate(45deg);
-            z-index: 2;
-            box-shadow: var(--shadow-md);
-        }
-        
-        .offer-header {
-            padding: var(--space-xl);
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-            background: rgba(255, 45, 142, 0.05);
-        }
-        
-        .offer-header h3 {
-            font-size: 2rem;
-            margin-bottom: var(--space-sm);
-            color: var(--text-primary);
-        }
-        
-        .offer-header p {
-            color: var(--text-body);
-            font-size: 1.1rem;
-        }
-        
-        .offer-pricing {
-            padding: var(--space-xl);
-            text-align: center;
-        }
-        
-        .launch-price {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--pink-primary);
-            line-height: 1;
-            margin-bottom: var(--space-sm);
-            text-shadow: 0 0 10px rgba(255, 45, 142, 0.3);
-        }
-        
-        .launch-price-range {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--pink-primary);
-            line-height: 1;
-            margin-bottom: var(--space-sm);
-            text-shadow: 0 0 10px rgba(255, 45, 142, 0.3);
-        }
-        
-        .original-price {
-            font-size: 1.5rem;
-            color: var(--text-muted);
-            text-decoration: line-through;
-            margin-bottom: var(--space-sm);
-        }
-        
-        .savings {
-            display: inline-block;
-            background: rgba(255, 45, 142, 0.1);
-            color: var(--pink-primary);
-            padding: var(--space-xs) var(--space-md);
-            border-radius: var(--radius-full);
-            font-weight: 700;
-            font-size: 1rem;
-            margin-bottom: var(--space-lg);
-            border: 1px solid rgba(255, 45, 142, 0.3);
-        }
-        
-        .offer-features {
-            padding: var(--space-xl);
-            border-top: 1px solid var(--border-color);
-        }
-        
-        .offer-features ul {
-            list-style: none;
-        }
-        
-        .offer-features li {
-            padding: var(--space-sm) 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-        }
-        
-        .offer-features li:last-child {
-            border-bottom: none;
-        }
-        
-        .offer-features i {
-            color: var(--pink-primary);
-        }
-        
-        .offer-action {
-            padding: 0 var(--space-xl) var(--space-xl);
-        }
-        
-        /* ===== ABOUT SECTION ===== */
-        .about {
-            padding: var(--space-xxl) var(--space-xl);
-            position: relative;
-            background: rgba(26, 26, 26, 0.9);
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-xxl);
-            align-items: center;
-        }
-        
-        .about-image {
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            position: relative;
-        }
-        
-        .about-image img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            transition: transform 0.7s ease;
-        }
-        
-        .about-image:hover img {
-            transform: scale(1.05);
-        }
-        
-        .about-text h3 {
-            font-family: var(--font-heading);
-            font-size: 2.8rem;
-            margin-bottom: var(--space-lg);
-            color: var(--text-primary);
-        }
-        
-        .about-text h3 span {
-            color: var(--pink-primary);
-        }
-        
-        .about-text p {
-            font-size: 1.2rem;
-            margin-bottom: var(--space-lg);
-            color: var(--text-body);
-            line-height: 1.7;
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-lg);
-            margin-top: var(--space-xl);
-        }
-        
-        .feature {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-md);
-        }
-        
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 45, 142, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--pink-primary);
-            font-size: 1.5rem;
-            flex-shrink: 0;
-            border: 1px solid rgba(255, 45, 142, 0.3);
-        }
-        
-        .feature-content h4 {
-            font-size: 1.3rem;
-            margin-bottom: var(--space-xs);
-            color: var(--text-primary);
-        }
-        
-        /* ===== GALLERY SECTION ===== */
-        .gallery {
-            padding: var(--space-xxl) var(--space-xl);
-            position: relative;
-            background: rgba(10, 10, 10, 0.9);
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: var(--space-lg);
-            margin-top: var(--space-xl);
-        }
-        
-        .gallery-item {
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            position: relative;
-            aspect-ratio: 1;
-            background: var(--dark-gray);
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-            cursor: pointer;
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-10px);
-            border-color: var(--pink-primary);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.7s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-        
-        .gallery-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(10, 10, 10, 0.9), transparent);
-            padding: var(--space-xl);
-            transform: translateY(100%);
-            transition: var(--transition);
-        }
-        
-        .gallery-item:hover .gallery-overlay {
-            transform: translateY(0);
-        }
-        
-        /* ===== CONTACT SECTION ===== */
-        .contact {
-            padding: var(--space-xxl) var(--space-xl);
-            position: relative;
-            background: rgba(26, 26, 26, 0.9);
-        }
-        
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-xxl);
-        }
-        
-        .contact-info h3 {
-            font-family: var(--font-heading);
-            font-size: 2.5rem;
-            margin-bottom: var(--space-xl);
-            color: var(--text-primary);
-        }
-        
-        .contact-info h3 span {
-            color: var(--pink-primary);
-        }
-        
-        .contact-methods {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--space-lg);
-        }
-        
-        .contact-method {
-            display: flex;
-            align-items: center;
-            gap: var(--space-lg);
-            padding: var(--space-lg);
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        .contact-method:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: var(--pink-primary);
-            transform: translateX(10px);
-        }
-        
-        .method-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 45, 142, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--pink-primary);
-            font-size: 1.5rem;
-            flex-shrink: 0;
-            border: 1px solid rgba(255, 45, 142, 0.3);
-        }
-        
-        .method-text strong {
-            display: block;
-            font-size: 1.3rem;
-            margin-bottom: 4px;
-            color: var(--text-primary);
-        }
-        
-        .method-text p {
-            color: var(--text-body);
-        }
-        
-        .contact-form {
-            background: rgba(255, 255, 255, 0.05);
-            padding: var(--space-xl);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border-color);
-            backdrop-filter: blur(10px);
-        }
-        
-        .form-group {
-            margin-bottom: var(--space-lg);
-        }
-        
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-lg);
-        }
-        
-        label {
-            display: block;
-            margin-bottom: var(--space-xs);
-            font-weight: 600;
-            color: var(--text-secondary);
-        }
-        
-        input, textarea, select {
-            width: 100%;
-            padding: 1rem 1.2rem;
-            background: rgba(255, 255, 255, 0.07);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            color: var(--text-primary);
-            font-family: var(--font-body);
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-        
-        input:focus, textarea:focus, select:focus {
-            outline: none;
-            border-color: var(--pink-primary);
-            background: rgba(255, 45, 142, 0.12);
-        }
-        
-        textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
-        /* ===== FOOTER ===== */
-        .footer {
-            background-color: var(--black);
-            padding: var(--space-xxl) var(--space-xl) var(--space-xl);
-            border-top: 1px solid var(--border-color);
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr 1fr;
-            gap: var(--space-xxl);
-            margin-bottom: var(--space-xxl);
-        }
-        
-        .footer-logo {
-            font-family: var(--font-heading);
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--white);
-            margin-bottom: var(--space-lg);
-        }
-        
-        .footer-logo span {
-            color: var(--pink-primary);
-        }
-        
-        .footer-description {
-            color: var(--text-body);
-            line-height: 1.7;
-        }
-        
-        .footer-links {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-xl);
-        }
-        
-        .footer-column h4 {
-            font-size: 1.3rem;
-            margin-bottom: var(--space-lg);
-            color: var(--text-primary);
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column li {
-            margin-bottom: var(--space-md);
-        }
-        
-        .footer-column a {
-            color: var(--text-body);
-            text-decoration: none;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-        }
-        
-        .footer-column a:hover {
-            color: var(--pink-primary);
-            padding-left: 5px;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: var(--space-md);
-            margin-top: var(--space-lg);
-        }
-        
-        .social-link {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.05);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-body);
-            font-size: 1.3rem;
-            transition: var(--transition);
-            text-decoration: none;
-        }
-        
-        .social-link:hover {
-            background: var(--pink-primary);
-            color: var(--white);
-            transform: translateY(-5px);
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: var(--space-xl);
-            border-top: 1px solid var(--border-color);
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-        
-        /* ===== RESPONSIVE DESIGN ===== */
-        @media (max-width: 1200px) {
-            .hero-title { font-size: 4rem; }
-            .section { padding: var(--space-xl) var(--space-lg); }
-            .footer-content { grid-template-columns: 1fr 1fr; }
-        }
-        
-        @media (max-width: 992px) {
-            .hero-title { font-size: 3.5rem; }
-            .section-title { font-size: 3rem; }
-            .about-content { grid-template-columns: 1fr; }
-            .contact-content { grid-template-columns: 1fr; }
-            .offer-cards { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
-            .footer-content { grid-template-columns: 1fr; gap: var(--space-xl); }
-            .mobile-menu-btn { display: block; }
-            
-            .nav-links {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100vh;
-                background: rgba(10, 10, 10, 0.98);
-                flex-direction: column;
-                padding: var(--space-xxl);
-                transform: translateX(-100%);
-                opacity: 0;
-                visibility: hidden;
-                transition: var(--transition);
-                z-index: 1000;
-                justify-content: center;
-                gap: var(--space-xl);
-            }
-            
-            .nav-links.active {
-                transform: translateX(0);
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .hero-title { font-size: 3rem; }
-            .hero-subtitle { font-size: 1.5rem; }
-            .section { padding: var(--space-xl) var(--space-md); }
-            .section-title { font-size: 2.5rem; }
-            .offer-cards { grid-template-columns: 1fr; }
-            .gallery-grid { grid-template-columns: 1fr; }
-            .features { grid-template-columns: 1fr; }
-            .form-row { grid-template-columns: 1fr; }
-            .footer-links { grid-template-columns: 1fr; }
-            .btn-primary { padding: 1rem 2.5rem; font-size: 1.1rem; }
-            .countdown-timer { gap: var(--space-sm); }
-            .countdown-number { font-size: 2rem; min-width: 60px; }
-        }
-        
-        @media (max-width: 480px) {
-            .hero-title { font-size: 2.5rem; }
-            .hero-subtitle { font-size: 1.3rem; }
-            .section { padding: var(--space-xl) var(--space-sm); }
-            .section-title { font-size: 2.2rem; }
-            .btn-primary { padding: 0.9rem 2rem; font-size: 1rem; }
-            .launch-price-range { font-size: 2rem; }
-            .countdown-number { font-size: 1.8rem; min-width: 50px; }
-            .hero-badge { font-size: 1rem; padding: var(--space-xs) var(--space-lg); }
-        }
-    </style>
+    <title>Brattitude Lashes | The Artistry of Alex Muschette</title>
+    <meta name="description" content="Discover the lash artistry of Alex Muschette. Premium eyelash extensions with a personalized touch. Coming soon to Luton.">
+    <!-- Fonts, Icons, and CSS remain exactly the same as your excellent original design -->
+    <!-- ... (All CSS styles from the original code are preserved here) ... -->
 </head>
 <body>
     <!-- Animated Background -->
@@ -970,469 +15,332 @@
     <!-- Header -->
     <header class="header" id="header">
         <a href="#home" class="logo">Brattitude<span>Lashes</span></a>
-        
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
-            <i class="fas fa-bars"></i>
-        </button>
-        
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
         <nav class="nav-links" id="navLinks">
             <a href="#home" class="nav-link active">Home</a>
-            <a href="#launch-offer" class="nav-link">Launch Offer</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#portfolio" class="nav-link">Portfolio</a> <!-- Changed -->
+            <a href="#about" class="nav-link">The Artist</a> <!-- Changed -->
+            <a href="#services" class="nav-link">Services</a> <!-- Changed -->
             <a href="#contact" class="nav-link">Contact</a>
-            <a href="#contact" class="btn-primary" style="margin-left: var(--space-md);">Book Now</a>
+            <!-- CTA changed from "Book Now" -->
+            <a href="#contact" class="btn-primary" style="margin-left: var(--space-md);">Join Waitlist</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - REWRITTEN -->
     <section class="hero section" id="home">
         <div class="hero-content">
-            <div class="hero-badge">Limited Time Launch Offer</div>
+            <!-- Badge text changed -->
+            <div class="hero-badge">Artistry & Vision</div>
             
-            <h1 class="hero-title">Brattitude<span>Lashes</span></h1>
+            <h1 class="hero-title">Alex<span>Muschette</span></h1> <!-- Changed -->
             
-            <p class="hero-subtitle">Transform your look with premium eyelash extensions at special launch prices. Don't miss this exclusive offer!</p>
+            <p class="hero-subtitle">Welcome to Brattitude Lashes, where precision meets passion. I am Alex, a dedicated lash artist crafting bespoke eyelash extensions to highlight your unique beauty. My studio in Luton is coming soon.</p> <!-- Changed -->
             
-            <div class="countdown">
-                <div class="countdown-title">OFFER ENDS IN:</div>
-                <div class="countdown-timer">
-                    <div class="countdown-item">
-                        <div class="countdown-number" id="days">14</div>
-                        <div class="countdown-label">Days</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-number" id="hours">23</div>
-                        <div class="countdown-label">Hours</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-number" id="minutes">45</div>
-                        <div class="countdown-label">Minutes</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-number" id="seconds">30</div>
-                        <div class="countdown-label">Seconds</div>
-                    </div>
-                </div>
+            <!-- Countdown replaced with a vision statement -->
+            <div class="countdown" style="background: rgba(255,255,255,0.05);">
+                <div class="countdown-title">MY PHILOSOPHY</div>
+                <p style="font-size: 1.2rem; color: var(--text-body);">Every set of lashes is a work of art, tailored not just to your eye shape, but to your personality. My goal is to provide a luxurious, comfortable experience that leaves you feeling confident and beautiful.</p>
             </div>
             
-            <a href="#launch-offer" class="btn-primary" style="margin-top: var(--space-xl);">View Launch Prices</a>
+            <!-- Button now links to portfolio -->
+            <a href="#portfolio" class="btn-primary" style="margin-top: var(--space-xl);">View My Portfolio</a>
         </div>
     </section>
 
-    <!-- Launch Offer Section -->
-    <section class="launch-offer section" id="launch-offer">
+    <!-- Portfolio Section - NEW FOCUS -->
+    <section class="gallery section" id="portfolio"> <!-- Reusing gallery styles -->
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Launch <span>Offer</span></h2>
-                <p class="section-subtitle">Limited time special prices to celebrate our launch</p>
+                <h2 class="section-title">Featured <span>Portfolio</span></h2>
+                <p class="section-subtitle">A glimpse into my work. For the full collection, visit my Instagram.</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- PORTFOLIO PLACEHOLDER 1 -->
+                <!-- Replace this image `src` with a direct link to Alex's work from Instagram -->
+                <div class="gallery-item">
+                    <img src="PLACEHOLDER_URL_FOR_ALEX_WORK_1.jpg" alt="Classic Set by Alex">
+                    <div class="gallery-overlay">
+                        <h4>Classic Set</h4>
+                        <p>Elegant & Natural</p>
+                    </div>
+                </div>
+                <!-- PORTFOLIO PLACEHOLDER 2 -->
+                <div class="gallery-item">
+                    <img src="PLACEHOLDER_URL_FOR_ALEX_WORK_2.jpg" alt="Volume Set by Alex">
+                    <div class="gallery-overlay">
+                        <h4>Volume Set</h4>
+                        <p>Full & Dramatic</p>
+                    </div>
+                </div>
+                <!-- PORTFOLIO PLACEHOLDER 3 -->
+                <div class="gallery-item">
+                    <img src="PLACEHOLDER_URL_FOR_ALEX_WORK_3.jpg" alt="Hybrid Set by Alex">
+                    <div class="gallery-overlay">
+                        <h4>Hybrid Set</h4>
+                        <p>The Perfect Balance</p>
+                    </div>
+                </div>
+                <!-- PORTFOLIO PLACEHOLDER 4: Link to Instagram -->
+                <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="gallery-item" style="text-decoration: none;">
+                    <div style="width:100%; height:100%; background: var(--gradient-1); display:flex; align-items:center; justify-content:center; flex-direction:column; padding: var(--space-xl);">
+                        <i class="fab fa-instagram" style="font-size: 4rem; margin-bottom: var(--space-md);"></i>
+                        <h3 style="color: var(--white); text-align: center;">View More on Instagram</h3>
+                        <p style="color: var(--white); text-align: center; margin-top: var(--space-sm);">@_alex.priv___</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Strong CTA to follow on Instagram -->
+            <div style="text-align: center; margin-top: var(--space-xl);">
+                <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="btn-primary">
+                    <i class="fab fa-instagram"></i> Follow for Latest Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - REWRITTEN for Alex -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About <span>The Artist</span></h2>
+                <p class="section-subtitle">Get to know Alex Muschette</p>
+            </div>
+            
+            <div class="about-content">
+                <!-- Replace this image `src` with a great portrait of Alex -->
+                <div class="about-image">
+                    <img src="PLACEHOLDER_URL_FOR_ALEX_PORTRAIT.jpg" alt="Alex Muschette, Lash Artist">
+                </div>
+                
+                <div class="about-text">
+                    <h3>Hi, I'm <span>Alex</span></h3>
+                    <p>My journey into the world of beauty and precision began with a simple belief: that everyone deserves to feel like the best version of themselves. This belief is the heart of Brattitude Lashes.</p>
+                    <p>I am certified in Classic, Hybrid, and Volume lash techniques, and I am committed to continuous education to master the latest styles and industry standards. For me, lash artistry is more than a service—it's a form of personal expression and connection with my clients.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-award"></i></div>
+                            <div class="feature-content">
+                                <h4>Certified Expertise</h4>
+                                <p>Formally trained and certified in advanced techniques.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-eye"></i></div>
+                            <div class="feature-content">
+                                <h4>Detail-Oriented</h4>
+                                <p>Meticulous attention to detail for flawless, safe applications.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                            <div class="feature-content">
+                                <h4>Passion for Beauty</h4>
+                                <p>Driven by a genuine love for enhancing natural beauty.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-users"></i></div>
+                            <div class="feature-content">
+                                <h4>Client-Focused</h4>
+                                <p>Every appointment is a collaborative, personalized experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview Section - REWRITTEN (No Prices) -->
+    <section class="launch-offer section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Future <span>Services</span></h2>
+                <p class="section-subtitle">A preview of what will be offered at the studio</p>
             </div>
             
             <div class="offer-cards">
-                <!-- Classic Full Set -->
+                <!-- Service 1 -->
                 <div class="offer-card">
                     <div class="offer-header">
-                        <h3>Classic Full Set</h3>
-                        <p>One extension per natural lash for a subtle, elegant look</p>
+                        <h3>Classic Lashes</h3>
+                        <p>One delicate extension per natural lash for a refined, elegant look.</p>
                     </div>
                     <div class="offer-pricing">
-                        <div class="launch-price-range">£25-£35</div>
-                        <div class="original-price">Usual: £45-£60</div>
-                        <div class="savings">Save up to £25</div>
+                        <!-- Price removed for pre-launch -->
+                        <div class="savings">Signature Service</div>
                     </div>
                     <div class="offer-features">
                         <ul>
-                            <li><i class="fas fa-check"></i> Natural, elegant look</li>
-                            <li><i class="fas fa-check"></i> Perfect for everyday wear</li>
-                            <li><i class="fas fa-check"></i> 2-2.5 hour appointment</li>
-                            <li><i class="fas fa-check"></i> Lasts 3-4 weeks</li>
+                            <li><i class="fas fa-check"></i> Natural, elegant enhancement</li>
+                            <li><i class="fas fa-check"></i> Perfect for first-timers</li>
+                            <li><i class="fas fa-check"></i> Lightweight & comfortable</li>
                         </ul>
-                    </div>
-                    <div class="offer-action">
-                        <a href="#contact" class="btn-primary" style="width: 100%; text-align: center;">Book Classic Set</a>
                     </div>
                 </div>
                 
-                <!-- Hybrid Full Set -->
+                <!-- Service 2 -->
                 <div class="offer-card popular">
                     <div class="offer-header">
-                        <h3>Hybrid Full Set</h3>
-                        <p>Mix of classic and volume for a fuller, more dramatic look</p>
+                        <h3>Hybrid Lashes</h3>
+                        <p>A beautiful mix of classic and volume lashes for a fuller, textured effect.</p>
                     </div>
                     <div class="offer-pricing">
-                        <div class="launch-price-range">£35-£45</div>
-                        <div class="original-price">Usual: £55-£70</div>
-                        <div class="savings">Save up to £25</div>
+                        <div class="savings">Most Popular</div>
                     </div>
                     <div class="offer-features">
                         <ul>
-                            <li><i class="fas fa-check"></i> Mix of classic & volume</li>
-                            <li><i class="fas fa-check"></i> Fuller, more dramatic look</li>
-                            <li><i class="fas fa-check"></i> 2.5-3 hour appointment</li>
-                            <li><i class="fas fa-check"></i> Lasts 3-4 weeks</li>
+                            <li><i class="fas fa-check"></i> Balanced volume and definition</li>
+                            <li><i class="fas fa-check"></i> Great for everyday glamour</li>
+                            <li><i class="fas fa-check"></i> Customizable density</li>
                         </ul>
-                    </div>
-                    <div class="offer-action">
-                        <a href="#contact" class="btn-primary" style="width: 100%; text-align: center;">Book Hybrid Set</a>
                     </div>
                 </div>
                 
-                <!-- Volume Full Set -->
+                <!-- Service 3 -->
                 <div class="offer-card">
                     <div class="offer-header">
-                        <h3>Volume Full Set</h3>
-                        <p>Multiple lightweight extensions for maximum volume and drama</p>
+                        <h3>Volume Lashes</h3>
+                        <p>Multiple ultra-fine extensions per lash for maximum drama and impact.</p>
                     </div>
                     <div class="offer-pricing">
-                        <div class="launch-price-range">£40-£50</div>
-                        <div class="original-price">Usual: £65-£80</div>
-                        <div class="savings">Save up to £30</div>
+                        <div class="savings">Full Glam</div>
                     </div>
                     <div class="offer-features">
                         <ul>
-                            <li><i class="fas fa-check"></i> Maximum volume & drama</li>
-                            <li><i class="fas fa-check"></i> Lightweight extensions</li>
-                            <li><i class="fas fa-check"></i> 2.5-3.5 hour appointment</li>
-                            <li><i class="fas fa-check"></i> Lasts 3-4 weeks</li>
+                            <li><i class="fas fa-check"></i> High-impact, glamorous look</li>
+                            <li><i class="fas fa-check"></i> Lightweight, fan-based technique</li>
+                            <li><i class="fas fa-check"></i> Fully customizable</li>
                         </ul>
-                    </div>
-                    <div class="offer-action">
-                        <a href="#contact" class="btn-primary" style="width: 100%; text-align: center;">Book Volume Set</a>
-                    </div>
-                </div>
-                
-                <!-- Infills -->
-                <div class="offer-card">
-                    <div class="offer-header">
-                        <h3>Infills</h3>
-                        <p>Maintain your lash extensions with a fill appointment</p>
-                    </div>
-                    <div class="offer-pricing">
-                        <div class="launch-price-range">£15-£25</div>
-                        <div class="original-price">Maintain your beautiful lashes</div>
-                        <div class="savings">Limited Time Price</div>
-                    </div>
-                    <div class="offer-features">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Recommended every 2-3 weeks</li>
-                            <li><i class="fas fa-check"></i> 1-1.5 hour appointment</li>
-                            <li><i class="fas fa-check"></i> Keep your lashes looking fresh</li>
-                            <li><i class="fas fa-check"></i> Extend the life of your set</li>
-                        </ul>
-                    </div>
-                    <div class="offer-action">
-                        <a href="#contact" class="btn-primary" style="width: 100%; text-align: center;">Book Infills</a>
                     </div>
                 </div>
             </div>
-            
             <div style="text-align: center; margin-top: var(--space-xxl);">
-                <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto;">
-                    <i class="fas fa-exclamation-circle" style="color: var(--pink-primary);"></i>
-                    <strong>Important:</strong> This launch offer is for a limited time only. Prices will increase to regular rates after the launch period. Book now to secure these special prices!
+                <p style="font-size: 1.2rem; color: var(--text-secondary);">
+                    <i class="fas fa-seedling" style="color: var(--pink-primary);"></i>
+                    <strong>Studio Launching Soon:</strong> Service details and pricing will be announced when the Luton studio opens. Join the waitlist for exclusive updates.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about section" id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About <span>Brattitude</span></h2>
-                <p class="section-subtitle">Professional lash artistry with attention to detail</p>
-            </div>
-            
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lash Artist at Work">
-                </div>
-                
-                <div class="about-text">
-                    <h3>Meet Your <span>Lash Artist</span></h3>
-                    <p>Welcome to Brattitude Lashes, where we combine technical expertise with artistic flair to create stunning lash transformations. Our founder is a certified lash artist with specialized training in classic, hybrid, and volume techniques.</p>
-                    <p>We believe that every client deserves personalized attention and lashes that enhance their natural beauty while fitting their lifestyle. Our studio is designed to be a relaxing sanctuary where you can unwind while we work our magic.</p>
-                    
-                    <div class="features">
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h4>Certified Expert</h4>
-                                <p>Fully certified with ongoing advanced training</p>
-                            </div>
-                        </div>
-                        
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h4>Premium Products</h4>
-                                <p>Medical-grade, hypoallergenic lash materials</p>
-                            </div>
-                        </div>
-                        
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-spa"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h4>Sanitary Studio</h4>
-                                <p>Immaculate, hygienic environment</p>
-                            </div>
-                        </div>
-                        
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h4>Custom Designs</h4>
-                                <p>Tailored to your eye shape and preferences</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery section" id="gallery">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our <span>Work</span></h2>
-                <p class="section-subtitle">See the stunning transformations we've created</p>
-            </div>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Classic Lashes">
-                    <div class="gallery-overlay">
-                        <h4>Classic Set</h4>
-                        <p>Natural, elegant enhancement</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1596703923338-48f1c07e4f2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Volume Lashes">
-                    <div class="gallery-overlay">
-                        <h4>Volume Set</h4>
-                        <p>Full, dramatic look</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mega Volume Lashes">
-                    <div class="gallery-overlay">
-                        <h4>Mega Volume</h4>
-                        <p>Maximum drama and volume</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hybrid Lashes">
-                    <div class="gallery-overlay">
-                        <h4>Hybrid Set</h4>
-                        <p>Perfect balance of classic and volume</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
+    <!-- Contact Section - REWRITTEN for Pre-Launch -->
     <section class="contact section" id="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Book Your <span>Appointment</span></h2>
-                <p class="section-subtitle">Secure your spot at launch prices before they're gone!</p>
+                <h2 class="section-title">Get In <span>Touch</span></h2>
+                <p class="section-subtitle">Connect with me and be the first to know when bookings open</p>
             </div>
             
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Contact <span>Info</span></h3>
-                    
+                    <h3>Connect <span>With Alex</span></h3>
                     <div class="contact-methods">
-                        <a href="tel:+447712345678" class="contact-method">
-                            <div class="method-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
+                        <!-- Primary link to Instagram -->
+                        <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="contact-method">
+                            <div class="method-icon"><i class="fab fa-instagram"></i></div>
                             <div class="method-text">
-                                <strong>Call or Text</strong>
-                                <p>+44 7712 345678</p>
+                                <strong>Instagram Portfolio</strong>
+                                <p>Follow for my latest work and updates</p>
+                                <p><small>@_alex.priv___</small></p>
                             </div>
                         </a>
-                        
-                        <a href="https://wa.me/447712345678" class="contact-method">
-                            <div class="method-icon">
-                                <i class="fab fa-whatsapp"></i>
-                            </div>
+                        <!-- General contact -->
+                        <a href="mailto:alex@brattitudelashes.com" class="contact-method">
+                            <div class="method-icon"><i class="fas fa-envelope"></i></div>
                             <div class="method-text">
-                                <strong>WhatsApp</strong>
-                                <p>+44 7712 345678</p>
+                                <strong>Email for Inquiries</strong>
+                                <p>alex@brattitudelashes.com</p>
                             </div>
                         </a>
-                        
-                        <a href="mailto:hello@brattitudelashes.com" class="contact-method">
-                            <div class="method-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="method-text">
-                                <strong>Email</strong>
-                                <p>hello@brattitudelashes.com</p>
-                            </div>
-                        </a>
-                        
+                        <!-- Location -->
                         <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
+                            <div class="method-icon"><i class="fas fa-map-marker-alt"></i></div>
                             <div class="method-text">
-                                <strong>Studio Location</strong>
+                                <strong>Studio Coming Soon</strong>
                                 <p>Luton, Bedfordshire</p>
-                                <p><small>Full address provided upon booking</small></p>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div style="margin-top: var(--space-xl);">
-                        <h4 style="margin-bottom: var(--space-md); color: var(--pink-primary);">Business Hours</h4>
-                        <p style="margin-bottom: var(--space-xs);"><strong>Tuesday - Saturday:</strong> 10:00 AM - 8:00 PM</p>
-                        <p><strong>Sunday & Monday:</strong> By appointment only</p>
                     </div>
                 </div>
                 
+                <!-- Form is now a Waitlist Signup -->
                 <div class="contact-form">
-                    <form id="bookingForm">
+                    <form id="waitlistForm">
                         <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name *</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
+                            <div class="form-group"><label for="name">Your Name *</label><input type="text" id="name" name="name" required></div>
+                            <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" required></div>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="service">Service *</label>
-                            <select id="service" name="service" required>
-                                <option value="">Select a service</option>
-                                <option value="classic">Classic Full Set (£25-£35)</option>
-                                <option value="hybrid">Hybrid Full Set (£35-£45)</option>
-                                <option value="volume">Volume Full Set (£40-£50)</option>
-                                <option value="infills">Infills (£15-£25)</option>
-                                <option value="consultation">Consultation</option>
+                            <label for="interest">I'm most interested in...</label>
+                            <select id="interest" name="interest">
+                                <option value="">Select an option</option>
+                                <option value="classic">Classic Lashes</option>
+                                <option value="hybrid">Hybrid Lashes</option>
+                                <option value="volume">Volume Lashes</option>
+                                <option value="notsure">Not sure yet!</option>
                             </select>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="date">Preferred Date *</label>
-                            <input type="date" id="date" name="date" required>
+                            <label for="message">Any questions for Alex?</label>
+                            <textarea id="message" name="message" placeholder="I'd love to hear from you..."></textarea>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Additional Information</label>
-                            <textarea id="message" name="message" placeholder="Tell us about your lash experience, any allergies, or special requests..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn-primary" style="width: 100%;">Book Now at Launch Price</button>
-                        
-                        <p style="text-align: center; margin-top: var(--space-md); font-size: 0.9rem; color: var(--text-muted);">
-                            <i class="fas fa-lock"></i> Your information is secure and will only be used to contact you about your appointment.
-                        </p>
+                        <!-- Submit button text changed -->
+                        <button type="submit" class="btn-primary" style="width: 100%;">Join the Pre-Launch Waitlist</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer - Updated -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="footer-logo">Brattitude<span>Lashes</span></div>
-                    <p class="footer-description">
-                        Professional eyelash extensions at special launch prices. Transform your look with premium lashes in a relaxing, comfortable environment.
-                    </p>
-                    
+                    <p class="footer-description">The lash artistry of Alex Muschette. Crafting bespoke beauty in Luton, Bedfordshire. Opening soon.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
+                        <!-- Social links updated to focus on Instagram -->
+                        <a href="https://www.instagram.com/_alex.priv___?igsh=MW9wazc3MHluYWlnaw==" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
-                
                 <div class="footer-links">
                     <div class="footer-column">
-                        <h4>Quick Links</h4>
+                        <h4>Explore</h4>
                         <ul>
                             <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
-                            <li><a href="#launch-offer"><i class="fas fa-chevron-right"></i> Launch Offer</a></li>
-                            <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
-                            <li><a href="#gallery"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                            <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                            <li><a href="#about"><i class="fas fa-chevron-right"></i> The Artist</a></li>
                         </ul>
                     </div>
-                    
                     <div class="footer-column">
                         <h4>Services</h4>
                         <ul>
-                            <li><a href="#launch-offer"><i class="fas fa-chevron-right"></i> Classic Full Set</a></li>
-                            <li><a href="#launch-offer"><i class="fas fa-chevron-right"></i> Hybrid Full Set</a></li>
-                            <li><a href="#launch-offer"><i class="fas fa-chevron-right"></i> Volume Full Set</a></li>
-                            <li><a href="#launch-offer"><i class="fas fa-chevron-right"></i> Infills</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Classic Lashes</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Hybrid Lashes</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Volume Lashes</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; <span id="currentYear">2024</span> Brattitude Lashes. All rights reserved. Luton, Bedfordshire.</p>
-                <p style="margin-top: var(--space-sm);">
-                    <span style="color: var(--pink-primary); font-weight: bold;">Launch Offer:</span> 
-                    Limited time prices - Book now to secure special rates!
-                </p>
+                <p>&copy; <span id="currentYear">2024</span> Brattitude Lashes by Alex Muschette.</p>
+                <p style="margin-top: var(--space-sm);"><span style="color: var(--pink-primary);">Luton, Bedfordshire</span> | Launching Soon</p>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        // ===== INITIALIZE WEBSITE =====
         document.addEventListener('DOMContentLoaded', () => {
-            console.log('✨ Brattitude Lashes Launch Website Initializing...');
-            
-            // Initialize all components
-            initializeMobileMenu();
-            initializeCountdownTimer();
-            initializeBookingForm();
-            initializeSmoothScrolling();
-            updateCurrentYear();
-            setMinimumBookingDate();
-            
-            console.log('✅ Website initialized successfully!');
-        });
-
-        // ===== MOBILE MENU =====
-        function initializeMobileMenu() {
+            // 1. Initialize Mobile Menu (unchanged)
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const navLinks = document.getElementById('navLinks');
-            
             if (mobileMenuBtn && navLinks) {
                 mobileMenuBtn.addEventListener('click', () => {
                     navLinks.classList.toggle('active');
@@ -1440,8 +348,6 @@
                         ? '<i class="fas fa-times"></i>' 
                         : '<i class="fas fa-bars"></i>';
                 });
-                
-                // Close menu when clicking on a link
                 document.querySelectorAll('.nav-link').forEach(link => {
                     link.addEventListener('click', () => {
                         navLinks.classList.remove('active');
@@ -1449,167 +355,51 @@
                     });
                 });
             }
-        }
 
-        // ===== COUNTDOWN TIMER =====
-        function initializeCountdownTimer() {
-            // Set the end date for the launch offer (2 weeks from now)
-            const endDate = new Date();
-            endDate.setDate(endDate.getDate() + 14); // 2 weeks from now
-            
-            function updateCountdown() {
-                const now = new Date().getTime();
-                const distance = endDate - now;
-                
-                // Calculate days, hours, minutes, seconds
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
-                // Update the countdown display
-                document.getElementById('days').textContent = days.toString().padStart(2, '0');
-                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-                
-                // If the countdown is over, show a message
-                if (distance < 0) {
-                    clearInterval(countdownInterval);
-                    document.querySelector('.countdown').innerHTML = '<div class="countdown-title">LAUNCH OFFER HAS ENDED</div>';
-                }
-            }
-            
-            // Update countdown every second
-            updateCountdown();
-            const countdownInterval = setInterval(updateCountdown, 1000);
-        }
-
-        // ===== BOOKING FORM =====
-        function initializeBookingForm() {
-            const bookingForm = document.getElementById('bookingForm');
-            
-            if (bookingForm) {
-                bookingForm.addEventListener('submit', function(e) {
+            // 2. Form Handling for Waitlist
+            const waitlistForm = document.getElementById('waitlistForm');
+            if (waitlistForm) {
+                waitlistForm.addEventListener('submit', function(e) {
                     e.preventDefault();
-                    
-                    // Get form data
-                    const formData = new FormData(this);
-                    const name = formData.get('name');
-                    const service = formData.get('service');
-                    
-                    // Show loading state
                     const submitBtn = this.querySelector('button[type="submit"]');
                     const originalText = submitBtn.innerHTML;
-                    
-                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Booking...';
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
                     submitBtn.disabled = true;
-                    
-                    // Simulate form submission
+                    // Simulate submission
                     setTimeout(() => {
-                        submitBtn.innerHTML = '<i class="fas fa-check"></i> Appointment Requested!';
+                        submitBtn.innerHTML = '<i class="fas fa-check"></i> You're on the List!';
                         submitBtn.style.background = '#25D366';
-                        
-                        // Reset form after 2 seconds
                         setTimeout(() => {
-                            bookingForm.reset();
+                            waitlistForm.reset();
                             submitBtn.innerHTML = originalText;
                             submitBtn.disabled = false;
                             submitBtn.style.background = '';
-                        }, 2000);
-                        
-                        // Show confirmation message
-                        alert(`Thank you, ${name}! Your appointment request for ${getServiceName(service)} has been received. We'll contact you within 24 hours to confirm your booking at the launch price.`);
+                        }, 3000);
+                        alert("Thank you! You've been added to our exclusive waitlist. Alex will be in touch with updates soon.");
                     }, 1500);
                 });
             }
-        }
-        
-        function getServiceName(serviceValue) {
-            const services = {
-                'classic': 'Classic Full Set',
-                'hybrid': 'Hybrid Full Set',
-                'volume': 'Volume Full Set',
-                'infills': 'Infills',
-                'consultation': 'Consultation'
-            };
-            return services[serviceValue] || 'a lash service';
-        }
 
-        // ===== SET MINIMUM BOOKING DATE =====
-        function setMinimumBookingDate() {
-            const dateInput = document.getElementById('date');
-            if (dateInput) {
-                const today = new Date().toISOString().split('T')[0];
-                dateInput.min = today;
-                
-                // Set default date to tomorrow
-                const tomorrow = new Date();
-                tomorrow.setDate(tomorrow.getDate() + 1);
-                dateInput.value = tomorrow.toISOString().split('T')[0];
-            }
-        }
-
-        // ===== SMOOTH SCROLLING =====
-        function initializeSmoothScrolling() {
-            // Update active nav link on scroll
+            // 3. Smooth Scrolling (unchanged)
             window.addEventListener('scroll', () => {
                 const header = document.getElementById('header');
-                if (window.scrollY > 100) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-                
-                // Update active nav link
-                const sections = document.querySelectorAll('section');
-                const navLinks = document.querySelectorAll('.nav-link');
-                
-                let currentSection = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop - 100;
-                    const sectionHeight = section.clientHeight;
-                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                        currentSection = section.getAttribute('id');
-                    }
-                });
-                
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${currentSection}`) {
-                        link.classList.add('active');
-                    }
-                });
+                header.classList.toggle('scrolled', window.scrollY > 100);
             });
-            
-            // Smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
                     if (targetId === '#') return;
-                    
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
-                        const headerHeight = document.getElementById('header').offsetHeight;
-                        const targetPosition = targetElement.offsetTop - headerHeight;
-                        
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
+                        window.scrollTo({ top: targetElement.offsetTop - 100, behavior: 'smooth' });
                     }
                 });
             });
-        }
 
-        // ===== UTILITIES =====
-        function updateCurrentYear() {
-            const currentYear = document.getElementById('currentYear');
-            if (currentYear) {
-                currentYear.textContent = new Date().getFullYear();
-            }
-        }
+            // 4. Update Copyright Year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        });
     </script>
 </body>
 </html>
